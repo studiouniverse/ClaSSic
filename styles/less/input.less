@@ -1,0 +1,144 @@
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+.billboard a {
+  color: #68f58f;
+}
+
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+a,
+button,
+.button {
+  cursor: pointer;
+  transition: color .2s, opacity .2s;
+}
+
+a > span {
+  padding-bottom: 1px;
+  border-bottom: 1px solid;
+}
+
+a:not(:hover):not(:focus) > span {
+  border-color: transparent;
+}
+
+button,
+.button {
+  display: inline-block;
+  text-align: center;
+  background: transparent;
+  border: thin solid;
+  padding: 0.9rem 1.8rem;
+  vertical-align: baseline;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  background-color: rgba(125, 125, 125, 0.5);
+}
+
+button + button,
+button + .button,
+.button + button,
+.button + .button {
+  margin-left: 0.9rem;
+}
+
+button.circular,
+.button.circular {
+  border: none;
+  background: #0275d8;
+  color: #fff;
+  padding: 0;
+  line-height: 2.8em;
+  width: 5.4rem;
+  height: 5.4rem;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
+}
+
+.billboard button,
+.billboard .button {
+  color: inherit;
+}
+
+a.button > span {
+  border-color: transparent;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+input,
+button,
+select,
+textarea {
+  line-height: inherit;
+}
+
+input[type="radio"]:disabled,
+input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+output {
+  display: inline-block;
+}
