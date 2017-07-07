@@ -1,8 +1,8 @@
 # Classic
-A CSS library for creating clean, simple websites.
+A CSS library for creating clean, simple websites. Used at http://studiouniver.se. 
 
-Powers http://studiouniver.se. Demo coming soon.
+Simple demo: https://studiouniverse.github.io/Classic/
 
-BETA & INCOMPLETE & UNTESTED.
+Classic is in BETA and should be considered incomplete.
 
-Classic wouldn't have been possible without having a good long look at Jason Hibbs (Pugless) and Bootstrap 4 and Normalize.
+Classic is in no way associated, but is heavily inspired by: [Jason Hibbs](http://jasonhibbs.co.uk/) (who made [Pugless](https://github.com/jasonhibbs/Pugless)) and [Bootstrap 4](https://v4-alpha.getbootstrap.com/) and [Normalize](https://necolas.github.io/normalize.css/).
