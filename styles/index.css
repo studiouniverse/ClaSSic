@@ -483,7 +483,7 @@ body {
   line-height: 1.4;
   font-style: normal;
   font-weight: 400;
-  font-family: 'Rubik', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, 'Lato', "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, 'Lato', "Helvetica Neue", Arial, sans-serif;
   font-weight: normal;
   color: #383D49;
 }
