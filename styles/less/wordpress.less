@@ -1,0 +1,69 @@
+// WordPress //////////////////////////////////////////////////////
+
+.size-full {
+  width: auto;
+  max-width: 100%;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+.alignleft,
+.alignright {
+  max-width: 44%;
+}
+
+.alignleft {
+  float: left;
+  // margin: 0 (@gap) (@lh) 0;
+
+  @media @tablet {
+    margin-left: -7.5%;
+  }
+}
+
+.alignright {
+  float: right;
+  // margin: 0 0 (@lh) (@gap);
+
+  @media @tablet {
+    margin-right: -7.5%;
+  }
+}
+
+.size-thumbnail {
+  width: 24%;
+  max-width: 360px;
+}
+
+.size-medium {
+  width: 34%;
+  max-width: 680px;
+}
+
+.size-large {
+  width: 48%;
+  max-width: 960px;
+}
+
+.wp-caption {
+  &[style] {
+    width: auto !important;
+  }
+
+  .wp-caption-text {
+    &, a {
+      // color: fadeout(@textcolor, 66);
+    }
+
+    a:hover,
+    a:focus {
+      color: @linkcolor;
+    }
+
+    font-size: 0.75em;
+    // font-weight: (@fontweight_base - 100);
+  }
+}

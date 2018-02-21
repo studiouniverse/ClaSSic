@@ -4,6 +4,7 @@ html {
   -moz-font-feature-settings: 'kern';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
   direction: ltr;
   text-align: left;
 }
@@ -15,17 +16,17 @@ html {
 }
 
 body {
-  font-size: 1.8rem;
-  line-height: 1.8;
+  font-size: @fontSize;
+  line-height: @lineHeight;
   font-style: normal;
-  font-weight: 400;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: @fontWeight;
+  font-family: @bodyFont;
   font-weight: normal;
-  color: #292b2c;
+  color: @textColor;
 }
 
 footer {
-  color: #999;
+  color: @mediumColor;
 }
 
 p,
@@ -33,19 +34,11 @@ pre,
 blockquote,
 address,
 hr {
-  margin: 0 0 1.8rem 0;
+  margin: 0 0 @gap 0;
 }
 
 blockquote {
-  background: #f2f2f2;
-  border-radius: 3px;
-  color: #999;
-  padding: 1.8rem;
-}
-
-blockquote p {
-  border-left: 2px solid #0275d8;
-  padding-left: 1.8rem;
+  font-style: italic;
 }
 
 address {
@@ -54,85 +47,77 @@ address {
 }
 
 pre {
-  overflow: auto;
+  font-size: @fontSize;
+  color: @primaryColor;
 }
 
-small,
-.small {
-  font-size: 1.4rem;
+small {
+  font-size: @fontSizeSmall;
 }
 
 @media (max-width: 479px) {
   .mobile-small {
-    font-size: 1.4rem;
+    font-size: @fontSizeSmall;
   }
 }
 
 h1,
 h2 {
   margin-top: 0;
-  margin-bottom: 2.7rem;
+  margin-bottom: @gapXL;
 }
 
 h3,
 h4,
 h5 {
   margin-top: 0;
-  margin-bottom: 1.8rem;
+  margin-bottom: @gap;
 }
 
 h1,
 h2,
-h3,
-h4,
-h5 {
+h3 {
   line-height: 1.3;
+  letter-spacing: 1.5px;
 }
 
 h1 {
-  font-size: 3.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  font-size: @gapXXXL;
+  font-weight: 300;
+  font-family: @headerFont;
+}
+
+h1 + p {
+  font-size: (@gap + @gapXS);
 }
 
 h2 {
-  font-size: 2.7rem;
-  font-weight: bold;
-  font-family: 'Karla', Roboto, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: @gapXXL;
+  font-weight: 300;
+  font-family: @titleFont;
+  padding-bottom: @gapXL;
+  border-bottom: 2px solid;
 }
 
 h3 {
-  font-size: 2.7rem;
-  font-weight: normal;
-  font-family: 'Karla', Roboto, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: @gapXL;
+  font-weight: 300;
+  font-family: @titleFont;
 }
 
 h4 {
-  font-size: 2.4rem;
-  font-weight: normal;
+  font-size: @gap;
+  font-weight: bold;
 }
 
 h5 {
-  font-size: 1.8rem;
-  font-weight: normal;
+  font-size: @gap;
+  font-weight: 300;
+  color: @mediumColor;
 }
 
-[tabindex="-1"]:focus {
-  outline: none !important;
-}
 
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
-}
-
-.fa-l {
-  font-size: 2.7rem;
-  vertical-align: middle;
-}
-
-.fa-xl {
-  font-size: 3.4rem;
-  vertical-align: middle;
 }

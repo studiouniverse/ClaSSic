@@ -8,6 +8,12 @@ html {
   box-sizing: inherit;
 }
 
+@at-root {
+  @-ms-viewport {
+    width: device-width;
+  }
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -30,97 +36,24 @@ body,
 header,
 footer,
 article,
+aside,
+main,
 section,
-figure {
+figure,
+figcaption,
+nav {
+  display: block;
   position: relative;
   .clear();
 }
 
-header {
-  padding: 5.4rem 0;
-  margin-bottom: 2.7rem;
+[hidden] {
+  display: none !important;
 }
 
-footer {
-  padding: 2.7rem 0;
-  background-color: #292b2c;
-}
-
-section {
-  margin-bottom: 2.7rem;
-}
-
-article > section:last-of-type,
-section > *:last-child,
-section .layout:last-of-type > *:last-child {
-  margin-bottom: 0;
-}
-
-figure,
-canvas,
-form,
-ol,
-ul,
-dl {
-  margin: 0 0 1.8rem 0;
-}
-
-ul ul,
-ul ol,
-ol ul,
-ol ol {
-  margin-bottom: 0;
-}
-
-@media (min-width: 768px) {
-  nav ul li {
-    display: inline-block;
-  }
-}
-
-figure, img {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  max-width: 100%;
-}
-
-img {
-  vertical-align: middle;
-}
-
-figure {
-  background-size: cover;
-  background-position: center center;
-}
-
-figure,
-figure img,
-figure a {
-  display: block;
-}
-
-figure.rounded img {
-  border-radius: 3px;
-}
-
-figure.circular img {
-  border-radius: 50%;
-}
-
-canvas {
-  display: block;
-  touch-action: none;
+[disabled] {
+  cursor: default;
   user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
-  width: 100% !important;
-  height: auto !important;
-}
-
-hr {
-  height: 0;
-  border: none;
-  border-top: 1px solid;
-  opacity: 0.3;
+  pointer-events: none;
+  opacity: .5;
 }

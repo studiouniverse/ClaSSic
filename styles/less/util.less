@@ -1,0 +1,303 @@
+.text-upper {
+  text-transform: uppercase;
+}
+
+.text-lower {
+  text-transform: lowercase;
+}
+
+.text-smaller {
+  font-size: @fontSizeSmall;
+}
+
+.text-larger {
+  font-size: @fontSize;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.align-left,
+.align-left * {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.align-center,
+.align-center * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-right,
+.align-right * {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.text-sm-left {
+  @media (min-width: 480px) {
+    text-align: left;
+  }
+}
+
+.text-sm-right {
+  @media (min-width: 480px) {
+    text-align: right;
+  }
+}
+
+.text-sm-center {
+  @media (min-width: 480px) {
+    text-align: center;
+  }
+}
+
+.text-md-left {
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.text-md-right {
+  @media (min-width: 768px) {
+    text-align: right;
+  }
+}
+
+.text-md-center {
+  @media (min-width: 768px) {
+    text-align: center;
+  }
+}
+
+.block {
+  display: block;
+}
+
+.absolute {
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  left: 0;
+}
+
+.sticky {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mt-huge {
+  margin-top: @gapHuge;
+}
+
+.mt-gigantic {
+  margin-top: @gapGigantic;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.py-sm-0 {
+  @media (min-width: 480px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.py-md-0 {
+  @media (min-width: 768px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.pt-huge {
+  padding-top: @gapHuge;
+}
+
+.pt-gigantic {
+  padding-top: @gapGigantic;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.bg-primary {
+  background-color: @primaryColor;
+}
+
+.notch-primary {
+  border-left: @gapS solid @primaryColor;
+}
+
+.text-primary,
+a[href].text-primary {
+  color: @primaryColor !important;
+}
+
+.bg-secondary {
+  background-color: @secondaryColor;
+}
+
+.notch-secondary {
+  border-left: @gapS solid @secondaryColor;
+}
+
+.text-secondary,
+a[href].text-secondary {
+  color: @secondaryColor !important;
+}
+
+.bg-alt {
+  background-color: @altColor;
+}
+
+.notch-alt {
+  border-left: @gapS solid @altColor;
+}
+
+.text-alt,
+a[href].text-alt {
+  color: @altColor !important;
+}
+
+.bg-lightest {
+  background-color: @lightestColor;
+}
+
+.notch-lightest {
+  border-left: @gapS solid @lightestColor;
+}
+
+.text-lightest,
+a[href].text-lightest {
+  color: @lightestColor !important;
+}
+
+.bg-light {
+  background-color: @lightColor;
+}
+
+.notch-light {
+  border-left: @gapS solid @lightColor;
+}
+
+.text-light,
+a[href].text-light {
+  color: @lightColor !important;
+}
+
+.bg-medium {
+  background-color: @mediumColor;
+}
+
+.notch-medium {
+  border-left: @gapS solid @mediumColor;
+}
+
+.text-medium,
+a[href].text-medium {
+  color: @mediumColor !important;
+}
+
+.bg-dark {
+  background-color: @darkColor;
+}
+
+.notch-dark {
+  border-left: @gapS solid @darkColor;
+}
+
+.text-dark,
+a[href].text-dark {
+  color: @darkColor !important;
+}
+
+.bg-important {
+  background-color: @importantColor;
+}
+
+.notch-important {
+  border-left: @gapS solid @importantColor;
+}
+
+.text-important,
+a[href].text-important {
+  color: @importantColor !important;
+}
+
+.bg-warning {
+  background-color: @warningColor;
+}
+
+.notch-warning {
+  border-left: @gapS solid @warningColor;
+}
+
+.text-warning,
+a[href].text-warning {
+  color: @warningColor !important;
+}
+
+.bg-info {
+  background-color: @infoColor;
+}
+
+.notch-info {
+  border-left: @gapS solid @infoColor;
+}
+
+.text-info,
+a[href].text-info {
+  color: @infoColor !important;
+}
+
+.bg-su {
+  background-color: @studiouniverseColor;
+}
+
+.notch-su {
+  border-left: @gapS solid @studiouniverseColor;
+}
+
+.text-su,
+a[href].text-su {
+  color: @studiouniverseColor !important;
+}
