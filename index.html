@@ -49,15 +49,15 @@
   <main>
     <section class="billboard bg-anchor-bottom-right bg-size-8 text-dark" style="background-image:url(https://images.apple.com/v/iphone-x/e/images/overview/primary/design_hero_large_2x.jpg)">
       <div class="overlay bg-lightest opacity-4"></div>
-      <div class="layout">
+      <div class="layout" data-fade>
         <h1><strong>Shaken.</strong> Not stirred.</h1>
         <p><strong>Classic</strong> is a friendly CSS library for creating classy websites.</p>
       </div>
     </section>
 
-    <section class="bg-dark text-lightest mt-0">
-      <div class="layout">
-        <div class="layout layout-content">
+    <section class="bg-light mt-0">
+      <div class="layout layout-content">
+        <div class="text-larger text-center align-center">
           <p>Classic has everything you need to get started. It might be opinionated and bloated, but let's face it, that usually makes your life easier.</p>
           <p>Classic has been built for internal use, so currently ships without any documentation or support.</p>
         </div>
@@ -67,6 +67,7 @@
     <section>
       <div class="layout">
         <h3>"Don’t act like you’re not impressed."</h3>
+        <hr/>
         <p>Use different sections, panels and components to break up your content.</p>
         <div class="panel">
           <p>Highlight content with embedded panels.</p>
@@ -81,40 +82,35 @@
       </div>
     </section>
 
-    <section class="bg-dark py-3">
+    <section class="bg-light py-3">
       <div class="layout layout-fluid layout-horizontal">
         <div class="group">
-          <div class="col-15 col-sm-8 col-md-7 col-lg-5 align-center text-center text-lightest">
+          <div class="col-15 col-sm-8 col-md-7 col-lg-5 align-center text-center text-lightest" data-fade="rtl">
             <div class="inner" style="background-image:url(images/decking.jpg)">
-              <div class="overlay bg-dark opacity-2"></div>
               <h3>Column one.</h3>
               <p class="text-larger"><a href="#" class="text-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
             </div>
           </div>
-          <div class="col-15 col-sm-8 col-md-7 col-lg-5 align-center text-center text-lightest">
+          <div class="col-15 col-sm-8 col-md-7 col-lg-5 align-center text-center text-lightest" data-fade="rtl">
             <div class="inner" style="background-image:url(images/decking.jpg)">
-              <div class="overlay bg-dark opacity-2"></div>
               <h3>Column two.</h3>
               <p class="text-larger"><a href="#" class="text-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
             </div>
           </div>
-          <div class="col-15 col-sm-8 col-md-7 col-lg-5 align-center text-center text-lightest">
+          <div class="col-15 col-sm-8 col-md-7 col-lg-5 align-center text-center text-lightest" data-fade="rtl">
             <div class="inner" style="background-image:url(images/decking.jpg)">
-              <div class="overlay bg-dark opacity-2"></div>
               <h3>Column three.</h3>
               <p class="text-larger"><a href="#" class="text-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
             </div>
           </div>
-          <div class="col-15 col-sm-8 col-md-7 col-lg-5 align-center text-center text-lightest">
+          <div class="col-15 col-sm-8 col-md-7 col-lg-5 align-center text-center text-lightest" data-fade="rtl">
             <div class="inner" style="background-image:url(images/decking.jpg)">
-              <div class="overlay bg-dark opacity-2"></div>
               <h3>Column four.</h3>
               <p class="text-larger"><a href="#" class="text-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
             </div>
           </div>
-          <div class="col-15 col-sm-8 col-md-7 col-lg-5 align-center text-center text-lightest">
+          <div class="col-15 col-sm-8 col-md-7 col-lg-5 align-center text-center text-lightest" data-fade="rtl">
             <div class="inner" style="background-image:url(images/decking.jpg)">
-              <div class="overlay bg-dark opacity-2"></div>
               <h3>Column five.</h3>
               <p class="text-larger"><a href="#" class="text-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
             </div>
@@ -123,7 +119,13 @@
       </div>
     </section>
 
-    <section class="mt-0 bg-light">
+    <section>
+      <div class="layout layout-content text-center">
+        <p>It comes with a 12 step grid layout, and you can overflow the columns into a horizontal gallery.</p>
+      </div>
+    </section>
+
+    <section class="bg-light">
       <div class="layout layout-widescreen">
         <div class="group">
           <div class="col-6 col-lg-3 align-center text-center">
@@ -147,59 +149,64 @@
             <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
           </div>
         </div>
-        <div class="text-center mt-6">
-          <p>It comes with a 12 step grid layout, and you can overflow the columns into a horizontal gallery.</p>
-        </div>
       </div>
     </section>
 
-    <section class="text-dark">
+    <section>
+      <div class="layout layout-content text-center">
+        <p>If you have 4 compelling panels, try the special masonry layout.</p>
+      </div>
+    </section>
+
+    <section class="text-dark pt-0">
       <div class="layout layout-widescreen">
         <div class="group masonry">
-          <div class="bg-light text-center align-center">
-            <p>A masonry panel.</p>
-            <p><a href="" class="text-dark"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+          <div class="bg-light text-center align-center flex group-center" data-fade>
+            <div>
+              <p>A masonry panel.</p>
+              <p><a href="" class="text-dark"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+            </div>
           </div>
-          <div class="bg-dark text-center text-medium align-center">
-            <p>A masonry panel.</p>
-            <p><a href="" class="text-medium"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+          <div class="bg-dark text-center text-medium align-center flex group-center" data-fade>
+            <p>A masonry panel. <a href="" class="text-medium"><i class="far fa-arrow-alt-circle-right"></i></a></p>
           </div>
-          <div class="bg-dark text-center text-medium align-center">
-            <p>A masonry panel.</p>
-            <p><a href="" class="text-medium"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+          <div class="text-center text-lightest align-center flex group-center" style="background-image:url(images/decking.jpg)" data-fade>
+            <div>
+              <p>A masonry panel.</p>
+              <p><a href="" class="text-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+            </div>
           </div>
-          <div class="bg-light text-center align-center">
+          <div class="bg-dark text-medium text-center align-center flex group-center" data-fade>
             <p>A masonry panel.</p>
-            <p><a href="" class="text-dark"><i class="far fa-arrow-alt-circle-right"></i></a></p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="panel bg-alt">
+    <section class="panel bg-light">
       <div class="layout">
-        <div class="group group-center text-light">
+        <div class="group group-center text-medium">
           <div class="col-md-6">
             <h4>Cambridge, UK</h4>
           </div>
           <div class="col-md-6 text-md-right">
-            <h4><a href="tel:" class="text-lightest">+44 (0) 1223 123456</a></h4>
+            <h4><a href="tel:" class="text-medium">+44 (0) 1223 123456</a></h4>
           </div>
         </div>
-        <div class="group group-center text-light">
+        <div class="group group-center text-medium">
           <div class="col-md-6">
             <h4>New York, NY</h4>
           </div>
           <div class="col-md-6 text-md-right">
-            <h4><a href="tel:" class="text-lightest">+1 (0) 1223 123456</a></h4>
+            <h4><a href="tel:" class="text-medium">+1 (0) 1223 123456</a></h4>
           </div>
         </div>
-        <div class="group group-center text-light">
+        <div class="group group-center text-medium">
           <div class="col-md-6">
             <h4>LA, California</h4>
           </div>
           <div class="col-md-6 text-md-right">
-            <h4><a href="tel:" class="text-lightest">+1 (0) 1223 123456</a></h4>
+            <h4><a href="tel:" class="text-medium">+1 (0) 1223 123456</a></h4>
           </div>
         </div>
       </div>
@@ -327,7 +334,7 @@
     </div>
   </footer>
 
-  <script type="text/javascript" src="scripts/hermes-min.js"></script>
+  <script type="text/javascript" src="scripts/hermes.js"></script>
   <script type="text/javascript" src="scripts/classic.js"></script>
 </body>
 </html>

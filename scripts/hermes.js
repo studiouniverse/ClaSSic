@@ -393,8 +393,8 @@
       updateOnScroll: updateData.updateOnScroll || false,
       updateOnResize: updateData.updateOnResize || false,
 
-      _scrolled: false,
-      _resized: false
+      _scrolled: true,
+      _resized: true
     };
 
     updateObject.preUpdate = function() {

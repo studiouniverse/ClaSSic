@@ -57,18 +57,6 @@
     }
   }
 
-  &.group-center {
-    align-items: center;
-  }
-
-  &.group-shift-right {
-    justify-content: flex-end;
-  }
-
-  &.group-shift-center {
-    justify-content: center;
-  }
-
   &.masonry {
     flex-direction: column;
 
@@ -113,6 +101,18 @@
       }
     }
   }
+}
+
+.group-center {
+  align-items: center;
+}
+
+.group-shift-right {
+  justify-content: flex-end;
+}
+
+.group-shift-center {
+  justify-content: center;
 }
 
 [class*="col-"] {
@@ -178,7 +178,7 @@
   .group {
     cursor: -webkit-grab;
     cursor: grab;
-    padding: @gapXL @gap;
+    padding: @gapXL @gapXL;
     overflow-y: hidden;
     display: flex;
     flex-wrap: nowrap;
@@ -190,6 +190,9 @@
       display: block;
       position: relative;
       max-width: none;
+
+      padding-left: 0;
+      padding-right: @gapXL;
 
       // flex: 0 0 auto;
 

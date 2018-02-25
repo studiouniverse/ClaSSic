@@ -552,13 +552,13 @@ h3 {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 h4 {
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 2.2rem;
+  font-weight: 500;
 }
 h5 {
   font-size: 1.8rem;
   font-weight: 400;
-  color: #666;
+  text-transform: uppercase;
 }
 abbr[title],
 abbr[data-original-title] {
@@ -624,21 +624,6 @@ abbr[data-original-title] {
     margin-bottom: 0;
   }
 }
-.group.group-center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.group.group-shift-right {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-.group.group-shift-center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
 .group.masonry {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -694,6 +679,21 @@ abbr[data-original-title] {
     -ms-flex-preferred-size: calc(53.028%);
         flex-basis: calc(53.028%);
   }
+}
+.group-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.group-shift-right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.group-shift-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 [class*="col-"] {
   position: relative;
@@ -2060,7 +2060,7 @@ abbr[data-original-title] {
 .layout.layout-horizontal .group {
   cursor: -webkit-grab;
   cursor: grab;
-  padding: 3.6rem 1.8rem;
+  padding: 3.6rem 3.6rem;
   overflow-y: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2075,6 +2075,8 @@ abbr[data-original-title] {
   display: block;
   position: relative;
   max-width: none;
+  padding-left: 0;
+  padding-right: 3.6rem;
   -ms-touch-action: none !important;
       touch-action: none !important;
   -webkit-user-select: none !important;
@@ -2138,6 +2140,7 @@ section,
 .billboard,
 pre,
 .inner,
+.masonry div,
 [class*="col-"] {
   background-size: cover;
   background-position: center center;
@@ -2839,6 +2842,11 @@ th {
 .hidden {
   display: none;
 }
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .absolute {
   position: absolute;
   z-index: 11;
@@ -2929,6 +2937,11 @@ th {
   }
   .hidden-sm {
     display: none;
+  }
+  .flex-sm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .absolute-sm {
     position: absolute;
@@ -3022,6 +3035,11 @@ th {
   .hidden-md {
     display: none;
   }
+  .flex-md {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .absolute-md {
     position: absolute;
     z-index: 11;
@@ -3113,6 +3131,11 @@ th {
   }
   .hidden-lg {
     display: none;
+  }
+  .flex-lg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .absolute-lg {
     position: absolute;
@@ -5674,5 +5697,35 @@ a[href].text-instagram {
 .text-spotify,
 a[href].text-spotify {
   color: #81b71a !important;
+}
+[data-fade] {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: opacity .6s, -webkit-transform .6s;
+  transition: opacity .6s, -webkit-transform .6s;
+  transition: transform .6s, opacity .6s;
+  transition: transform .6s, opacity .6s, -webkit-transform .6s;
+  -webkit-transform: translateY(5.4rem);
+          transform: translateY(5.4rem);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+[data-fade].fading {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+[data-fade][data-fade="rtl"] {
+  -webkit-transform: translateX(5.4rem);
+          transform: translateX(5.4rem);
+}
+[data-fade][data-fade="rtl"].fading {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+[data-fade].faded {
+  -webkit-transition: none;
+  transition: none;
 }
 /*# sourceMappingURL=index.css.map */
