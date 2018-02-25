@@ -82,7 +82,14 @@
 
     > div {
       padding: @gap;
-      margin-bottom: @gapHuge;
+      margin-bottom: @gap;
+      min-height: 30vh;
+
+      @media (max-width: 767px) {
+        &:nth-child(3n) {
+          order: 4;
+        }
+      }
 
       @media (min-width: 768px) {
         flex-basis: calc((100% - @gap) * .4);

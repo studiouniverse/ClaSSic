@@ -5,7 +5,7 @@
 
 <!-- NOT PENNY'S BOAT -->
 
-<title>classic | by Studio Universe</title>
+<title>Classic by Studio Universe</title>
 <meta property="og:description" content="A CSS library for creating clean, simple websites." />
 
 <meta name="HandheldFriendly" content="True">
@@ -22,7 +22,6 @@
 </head>
 <body id="top">
   <header class="bg-lightest">
-    <div class="contact-nav">
     <div class="layout layout-fluid">
       <div class="group group-center">
         <div class="col-3 col-md-1 mb-0 py-md-0 text-left">
@@ -37,7 +36,7 @@
           <a class="btn btn-fancy" href=""><i hidden class="fal fa-mobile-android"></i> <span>Phone Me</span></a><a class="btn btn-fancy" href=""><i hidden class="fal fa-paper-plane"></i> <span>Email Me</span></a>
         </div>
         <div class="col-12 col-md-6 mb-0 pt-2 py-md-0 pull-md-5 text-left">
-          <nav class="primary-nav">
+          <nav class="nav-longer nav-md-inline">
             <ul class="menu">
               <li class="menu-item"><a href="#services" class="text-dark">Services</a></li>
               <li class="menu-item"><a href="#case-studies" class="text-dark">Case Studies</a></li>
@@ -47,7 +46,6 @@
         </div>
       </div>
     </div>
-  </div>
   </header>
 
   <main>
@@ -82,14 +80,14 @@
       </div>
     </section>
 
-    <section class="bg-secondary text-lightest">
+    <section class="bg-primary text-lightest">
       <div class="layout">
         <h3>This is a standard section.</h3>
-        <p>But I made it purple so people know you mean business.</p>
-        <div class="panel bg-primary">
+        <p>But I made it blue so people know you mean business.</p>
+        <div class="panel bg-alt">
           <p>Use classes to change colours.</p>
         </div>
-        <div class="panel bg-warning text-dark">
+        <div class="panel bg-secondary text-dark">
           <p>Use classes to change colours.</p>
         </div>
         <div class="panel bg-dark notch-info text-info">
@@ -116,7 +114,7 @@
           </div>
           <div class="col-lg-1"></div>
           <div class="col-lg-4 col-sm-12 col-md-8">
-            <figure class="align-right">
+            <figure class="align-center align-lg-right">
               <img src="https://media.giphy.com/media/tUKMeUhzcwrRu/giphy.gif" />
             </figure>
           </div>
@@ -124,7 +122,7 @@
       </div>
     </section>
 
-    <section class="panel">
+    <section class="panel py-0">
       <div class="layout">
         <div class="group">
           <div class="col-6 col-lg-3">
@@ -258,6 +256,13 @@
               </span>
               <textarea name="message" required=""></textarea>
             </label>
+
+            <label class="col-md-6">
+              <span class="label">
+                <span>Newsletter</span>
+              </span>
+              <span>Sign up to our newsletter <input type="checkbox" name="newsletter" ></span>
+            </label>
           </div>
 
           <div>
@@ -274,41 +279,11 @@
     </section> -->
   </main>
 
-  <footer class="">
+  <footer>
     <div class="layout">
       <div class="group">
-        <div class="col-12 col-md-7">
-          <div class="group">
-            <div class="col-12 col-md-4 pt-0">
-              <h5>Products</h5>
-              <nav class="nav-list"><ul>
-                <li><a href class="text-medium"><small>Link one</a></small></a></li>
-                <li><a href class="text-medium"><small>Link two</a></small></a></li>
-                <li><a href class="text-medium"><small>Link three</a></small></a></li>
-                <li><a href class="text-medium"><small>Link four</a></small></a></li>
-              </ul></nav>
-            </div>
-            <div class="col-12 col-md-4 pt-0">
-              <h5>Services</h5>
-              <nav class="nav-list"><ul>
-                <li><a href class="text-medium"><small>Link one</a></small></a></li>
-                <li><a href class="text-medium"><small>Link two</a></small></a></li>
-                <li><a href class="text-medium"><small>Link three</a></small></a></li>
-                <li><a href class="text-medium"><small>Link four</a></small></a></li>
-              </ul></nav>
-            </div>
-            <div class="col-12 col-md-4 pt-0">
-              <h5>Support</h5>
-              <nav class="nav-list"><ul>
-                <li><a href class="text-medium"><small>Link one</a></small></a></li>
-                <li><a href class="text-medium"><small>Link two</a></small></a></li>
-                <li><a href class="text-medium"><small>Link three</a></small></a></li>
-              </ul></nav>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-5 text-right">
-          <nav><ul>
+         <div class="col-12 col-md-5 push-md-7 text-center text-larger text-md-regular text-md-right">
+          <nav class="nav-inline"><ul>
             <li><a href class="text-twitter"><i class="fab fa-twitter"></i></a></li>
             <li><a href class="text-instagram"><i class="fab fa-instagram"></i></a></li>
             <li><a href class="text-facebook"><i class="fab fa-facebook"></i></a></li>
@@ -316,17 +291,49 @@
             <li><a href class="text-spotify"><i class="fab fa-spotify"></i></a></li>
           </ul></nav>
         </div>
+        <div class="col-12 col-md-7 pull-md-5">
+          <div class="group">
+            <div class="col-4 pt-0">
+              <h5>Products</h5>
+              <nav><ul>
+                <li><a href class="text-medium"><small>Link one</a></small></a></li>
+                <li><a href class="text-medium"><small>Link two</a></small></a></li>
+                <li><a href class="text-medium"><small>Link three</a></small></a></li>
+                <li><a href class="text-medium"><small>Link four</a></small></a></li>
+              </ul></nav>
+            </div>
+            <div class="col-4 pt-0">
+              <h5>Services</h5>
+              <nav><ul>
+                <li><a href class="text-medium"><small>Link one</a></small></a></li>
+                <li><a href class="text-medium"><small>Link two</a></small></a></li>
+                <li><a href class="text-medium"><small>Link three</a></small></a></li>
+                <li><a href class="text-medium"><small>Link four</a></small></a></li>
+              </ul></nav>
+            </div>
+            <div class="col-4 pt-0">
+              <h5>Support</h5>
+              <nav><ul>
+                <li><a href class="text-medium"><small>Link one</a></small></a></li>
+                <li><a href class="text-medium"><small>Link two</a></small></a></li>
+                <li><a href class="text-medium"><small>Link three</a></small></a></li>
+              </ul></nav>
+            </div>
+          </div>
+        </div>
       </div>
       <hr/>
       <div class="group">
         <div class="col-4 col-md-6">
           <h4>Classic</h4>
         </div>
-        <div class="col-8 col-md-6 text-md-right">
-          <p><small>By <strong><a href="http://studiouniverse.co" target="_blank" class="text-darkest">Studio Universe.</a></strong> Stay classy.</small></p>
+        <div class="col-8 col-md-6 text-right">
+          <p><small>By <strong><a href="http://studiouniverse.co" target="_blank">Studio Universe.</a></strong> Stay classy.</small></p>
         </div>
       </div>
     </div>
   </footer>
+
+  <script type="text/javascript" src="scripts/hermes.js"></script>
 </body>
 </html>
