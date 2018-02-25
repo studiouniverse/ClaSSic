@@ -5,7 +5,7 @@ header {
 
 footer {
   padding: @gapExtraLarge 0;
-  background-color: @darkestColor;
+  background-color: @lightColor;
 }
 
 figure,
@@ -115,11 +115,16 @@ ol {
   padding-left: @gap;
 }
 
-nav ul {
-  padding: 0;
-  list-style: none;
+nav ul,
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: 0;
+}
 
-  @media (max-width: 768px) {
+nav {
+  .nav-list() {
     li {
       border-top: 2px solid @lightColor;
 
@@ -140,28 +145,39 @@ nav ul {
       }
     }
   }
-}
 
-nav ul,
-ul ul,
-ul ol,
-ol ul,
-ol ol {
-  margin-bottom: 0;
-}
+  &.nav-list {
+    ul {
+      .nav-list();
 
-@media (min-width: 768px) {
-  nav ul li {
-    display: inline-block;
-    margin-right: @gap;
-    border: none;
-
-    &:last-child {
-      margin-right: 0;
+      li a[href] {
+        padding: @gapXS 0;
+      }
     }
+  }
 
-    a[href] {
+  ul {
+    padding: 0;
+    list-style: none;
 
+    @media (max-width: 767px) {
+      .nav-list();
+    }
+  }
+
+  &:not(.nav-list) {
+    ul {
+      @media (min-width: 768px) {
+        li {
+          display: inline-block;
+          margin-right: @gap;
+          border: none;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
     }
   }
 }

@@ -129,6 +129,10 @@
     padding-bottom: (@gap * @i);
   }
 
+  .pr-@{prefix}@{i} {
+    padding-right: (@gap * @i);
+  }
+
   .px-@{prefix}@{i} {
     padding-left: (@gap * @i);
     padding-right: (@gap * @i);
@@ -176,7 +180,7 @@
 
 // -- Colors
 
-@colors: ~"primary", ~"secondary", ~"alt", ~"lightest", ~"light", ~"medium", ~"darkest", ~"dark", ~"su", ~"important", ~"warning", ~"info", ~"transparent";
+@colors: ~"primary", ~"secondary", ~"alt", ~"lightest", ~"light", ~"medium", ~"darkest", ~"dark", ~"su", ~"important", ~"warning", ~"info", ~"transparent", ~"facebook", ~"twitter", ~"youtube", ~"instagram", ~"spotify";
 
 .generate-colors(@n, @i: 1) when (@i =< @n) {
   @colorName: extract(@colors, @i);
