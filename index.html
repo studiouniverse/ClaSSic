@@ -25,7 +25,7 @@
     <div class="contact-nav">
     <div class="layout layout-fluid">
       <div class="group group-center">
-        <div class="col-12 col-md-1 mb-0 py-md-0 text-left">
+        <div class="col-3 col-md-1 mb-0 py-md-0 text-left">
           <a class="block" href="/">
             <figure class="logo mb-0">
               <img src="images/logo.png" alt="Logo" style="max-width:36px;">
@@ -33,7 +33,10 @@
             </figure>
           </a>
         </div>
-        <div class="col-12 col-sm-6 mb-0 py-sm-0 text-left">
+        <div class="col-9 col-md-5 push-md-6 mb-0 py-sm-0 text-right text-sm-right">
+          <a class="btn btn-fancy" href=""><i hidden class="fal fa-mobile-android"></i> <span>Phone Me</span></a><a class="btn btn-fancy" href=""><i hidden class="fal fa-paper-plane"></i> <span>Email Me</span></a>
+        </div>
+        <div class="col-12 col-md-6 mb-0 pt-2 py-md-0 pull-md-5 text-left">
           <nav class="primary-nav">
             <ul class="menu">
               <li class="menu-item"><a href="#services" class="text-dark">Services</a></li>
@@ -41,9 +44,6 @@
               <li class="menu-item"><a href="#culture" class="text-dark">About Us</a></li>
             </ul>
           </nav>
-        </div>
-        <div class="col-12 col-sm-6 col-md-5 mb-0 py-sm-0 text-right text-sm-right">
-          <a class="btn" href=""><i hidden class="fal fa-mobile-android"></i> <span>Phone Me</span></a><a class="btn" href=""><i hidden class="fal fa-paper-plane"></i> <span>Email Me</span></a>
         </div>
       </div>
     </div>
@@ -62,8 +62,8 @@
       <div class="layout">
         <h2>"60% of the time, it works every time."</h2>
         <div class="layout layout-content">
-          <p>Classic doesn't do anything special, but it has everything you need to get started. That being said, it's opinionated, a little bloated, and thing's are only going to get worse.</p>
-          <p>It's in active-ish development, so I would very much go with <em>look but don't touch</em> for the time being (and maybe forever)... It's built for me. Not you.</p>
+          <p>Classic has everything you need to get started. It might be opinionated and bloated, but let's face it, that usually makes your life easier.</p>
+          <p>It's in active development, so stick to <em>look but don't touch</em> now and maybe forever... It's been built for me. Not you.</p>
         </div>
       </div>
     </section>
@@ -73,34 +73,34 @@
         <h3>"Don’t act like you’re not impressed."</h3>
         <p>Use different sections, panels and components to break up your content.</p>
         <div class="panel">
-          <p>This is an embedded panel, it's smaller than other panels, but can be used to highlight content.</p>
+          <p>Highlight content with embedded panels.</p>
         </div>
-        <blockquote class="notch-primary">This is an embedded blockquote, it's like a panel, but emphasises content.</blockquote>
+        <blockquote class="notch-primary">Emphasise content with blockquotes.</blockquote>
         <pre>
-          <code>&lt;div&gt;This is some HTML.&lt;/div&gt;</code>
+          <code><span>&lt;div&gt;Show off your sweet code.&lt;/div&gt;</span><span>&lt;div&gt;By using a code element.&lt;/div&gt;</span></code>
         </pre>
       </div>
     </section>
 
     <section class="bg-secondary text-lightest">
       <div class="layout">
-        <h3>This is a section panel.</h3>
-        <p>It's purple so people know you mean business.</p>
+        <h3>This is a standard section.</h3>
+        <p>But I made it purple so people know you mean business.</p>
         <div class="panel bg-primary">
-          <p>Things can be different colours.</p>
+          <p>Use classes to change colours.</p>
         </div>
         <div class="panel bg-warning text-dark">
-          <p>Things can be different colours.</p>
+          <p>Use classes to change colours.</p>
         </div>
         <div class="panel bg-dark notch-info text-info">
-          <p>Things can be different colours.</p>
+          <p>Use classes to change colours.</p>
         </div>
       </div>
     </section>
 
-    <section class="panel text-center text-md-right text-lightest mt-huge" style="background-image:url(images/bg.jpg)">
-      <div class="layout pt-gigantic">
-        <div class="layout-content align-right">
+    <section class="panel text-center text-md-right text-lightest mt-6" style="background-image:url(images/bg.jpg)">
+      <div class="layout pt-12 align-right">
+        <div class="layout-content">
           <h3>This panel has little gaps.</h3>
           <h3>Just look at them.</h3>
         </div>
@@ -127,60 +127,91 @@
     <section class="panel">
       <div class="layout">
         <div class="group">
-          <div class="col-6 col-md-3  text-center align-center">
-            <figure class="img-medium"><img src="images/logo.png"/></figure>
-            <p>I'm in a glass of emotion.</p>
-            <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
+          <div class="col-6 col-lg-3">
+            <div class="align-center text-center">
+              <figure class="img-medium"><img src="images/logo.png"/></figure>
+              <p>I'm in a glass of emotion.</p>
+              <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
+            </div>
           </div>
-          <div class="col-6 col-md-3  text-center align-center">
-            <figure class="img-medium"><img src="images/logo.png"/></figure>
-            <p>I'm in a glass of emotion.</p>
-            <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
+          <div class="col-6 col-lg-3">
+            <div class="align-center text-center">
+              <figure class="img-medium"><img src="images/logo.png"/></figure>
+              <p>I'm in a glass of emotion.</p>
+              <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
+            </div>
           </div>
-          <div class="col-6 col-md-3  text-center align-center">
-            <figure class="img-medium"><img src="images/logo.png"/></figure>
-            <p>I'm in a glass of emotion.</p>
-            <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
+          <div class="col-6 col-lg-3">
+            <div class="align-center text-center">
+              <figure class="img-medium"><img src="images/logo.png"/></figure>
+              <p>I'm in a glass of emotion.</p>
+              <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
+            </div>
           </div>
-          <div class="col-6 col-md-3  text-center align-center">
-            <figure class="img-medium"><img src="images/logo.png"/></figure>
-            <p>I'm in a glass of emotion.</p>
-            <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
+          <div class="col-6 col-lg-3">
+            <div class="align-center text-center">
+              <figure class="img-medium"><img src="images/logo.png"/></figure>
+              <p>I'm in a glass of emotion.</p>
+              <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-dark">
+      <div class="layout layout-widescreen">
+        <div class="group masonry">
+          <div class="bg-light text-center align-center">
+            <p>Panel one.</p>
+            <p><a href="" class="text-dark"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+          </div>
+          <div class="bg-primary text-center align-center">
+            <p>Panel two.</p>
+            <p><a href="" class="text-dark"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+          </div>
+          <div class="bg-primary text-center align-center">
+            <p>Panel three.</p>
+            <p><a href="" class="text-dark"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+          </div>
+          <div class="bg-light text-center align-center">
+            <p>Panel four.</p>
+            <p><a href="" class="text-dark"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light">
+      <div class="layout">
+        <div class="group group-center">
+          <div class="col-md-6">
+            <h3>Cambridge, UK</h3>
+          </div>
+          <div class="col-md-6 text-md-right">
+            <h3><a href="tel:">+44 (0) 1223 123456</a></h3>
+          </div>
+        </div>
+        <div class="group group-center">
+          <div class="col-md-6">
+            <h3>New York, NY</h3>
+          </div>
+          <div class="col-md-6 text-md-right">
+            <h3><a href="tel:">+1 (0) 1223 123456</a></h3>
+          </div>
+        </div>
+        <div class="group group-center">
+          <div class="col-md-6">
+            <h3>LA, California</h3>
+          </div>
+          <div class="col-md-6 text-md-right">
+            <h3><a href="tel:">+1 (0) 1223 123456</a></h3>
           </div>
         </div>
       </div>
     </section>
 
     <section>
-      <div class="layout">
-        <div class="group group-center">
-          <div class="col-6">
-            <h3>Cambridge, UK</h3>
-          </div>
-          <div class="col-6 text-right">
-            <h3><a href="tel:">+44 (0) 1223 123456</a></h3>
-          </div>
-        </div>
-        <div class="group group-center">
-          <div class="col-6">
-            <h3>New York, NY</h3>
-          </div>
-          <div class="col-6 text-right">
-            <h3><a href="tel:">+1 (0) 1223 123456</a></h3>
-          </div>
-        </div>
-        <div class="group group-center">
-          <div class="col-6">
-            <h3>LA, California</h3>
-          </div>
-          <div class="col-6 text-right">
-            <h3><a href="tel:">+1 (0) 1223 123456</a></h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="pt-0">
       <div class="layout">
         <h2>Send us a message.</h2>
         <p class="text-medium">It does forms too. But I haven't got around to checkboxes or radios yet.</p>
@@ -235,6 +266,12 @@
         </form>
       </div>
     </section>
+
+    <!-- <section class="panel pt-0 bg-transparent">
+      <div class="media">
+        <video playsinline="" autoplay="" muted="" loop="" poster="" class="video_overlay"><source src="" type="video/mp4"></video>
+      </div>
+    </section> -->
   </main>
 
   <footer class="bg-dark">

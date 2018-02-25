@@ -30,6 +30,8 @@ main,
 .billboard,
 blockquote,
 section {
+  max-width: 100%;
+
   .layout:last-of-type > *:last-child,
   > *:last-child {
     margin-bottom: 0;
@@ -62,6 +64,7 @@ pre {
 .panel {
   margin: 0 @gap;
   box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.025);
+  max-width: @maxWidescreenWidth;
 }
 
 section .panel,
@@ -77,6 +80,27 @@ pre {
 
   code {
     white-space: pre-line;
+
+    &:before {
+      counter-reset: listing;
+    }
+
+    span {
+      display: block;
+      counter-increment: listing;
+
+      &:before {
+        content: counter(listing, decimal-leading-zero) " ";
+        display: inline-block;
+        pointer-events: none;
+        color: @primaryColor;
+        user-select: none;
+        border-right: 2px solid @primaryColor;
+        margin-right: @gap;
+        padding-right: @gap;
+        text-align: right;
+      }
+    }
   }
 }
 

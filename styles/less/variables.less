@@ -2,7 +2,7 @@
 
 @maxTextWidth: 820px;
 @maxSiteWidth: 1100px;
-@maxWidescreenWidth: 1320px;
+@maxWidescreenWidth: 1440px;
 @maxFluidWidth: 100%;
 
 // https://material.io/devices/
@@ -29,8 +29,8 @@
 @gapMedium: @gapXL;
 @gapLarge: @gapXXXL;
 @gapExtraLarge: @gapXXXXXXXL;
-@gapHuge: 13.5rem;
-@gapGigantic: 22.5rem;
+@gapHuge: 10.8rem;
+@gapGigantic: 21.6rem;
 
 // -- Typography
 
@@ -39,26 +39,13 @@
 @fontSizeSmall: 1.4rem;
 @lineHeight: 1.4;
 
+@baseFont: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, 'Lato', "Helvetica Neue", Arial, sans-serif;
+@bodyFont: @baseFont;
+@headerFont: 'Rubik', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, 'Lato', "Helvetica Neue", Arial, sans-serif;
+@titleFont: 'Rubik', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, 'Lato', "Helvetica Neue", Arial, sans-serif;
+@monoFont: monospace;
+
 // -- Colours
-
-@backgroundColor: @lightestColor;
-@primaryColor: @blue;
-@secondaryColor: @purple;
-@altColor: darken(@blue, 20%);
-
-@importantColor: @red;
-@warningColor: @yellow;
-@infoColor: @teal;
-
-@darkestColor: #000;
-@darkColor: #383D49;
-@mediumColor: #666;
-@lightColor: #f0f0f0;
-@lightestColor: #ffffff;
-
-@textColor: @darkColor;
-@titleColor: @darkColor;
-@linkColor: #4285F4;
 
 @blue               :     #007bff;
 @indigo             :     #6610f2;
@@ -70,6 +57,32 @@
 @green              :     #28a745;
 @teal               :     #20c997;
 @cyan               :     #17a2b8;
+@white              :     #ffffff;
+@black              :     #000000;
+@slate              :     #2b2b2b;
+@charcoal           :     #666666;
+
+@backgroundColor: @lightestColor;
+@primaryColor: @blue;
+@secondaryColor: @purple;
+@altColor: darken(@blue, 20%);
+
+@transparentColor: transparent;
+@importantColor: @red;
+@warningColor: @yellow;
+@infoColor: @teal;
+
+@darkestColor: @black;
+@darkColor: @slate;
+@mediumColor: @charcoal;
+@lightColor: #f0f0f0;
+@lightestColor: @white;
+
+@textColor: @darkColor;
+@titleColor: @darkColor;
+@linkColor: #4285F4;
+
+// -- Brands
 
 @facebookColor      :     rgb(059, 089, 152);
 @twitterColor       :     rgb(000, 170, 239);
@@ -81,11 +94,5 @@
 @youtubeColor       :     rgb(196, 048, 043);
 @vimeoColor         :     rgb(068, 187, 255);
 @spotifyColor       :     rgb(129, 183, 026);
-@studiouniverseColor:     rgb(255, 250, 110);
+@suColor            :     rgb(255, 250, 110);
 
-// -- Typography
-
-@baseFont: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, 'Lato', "Helvetica Neue", Arial, sans-serif;
-@bodyFont: @baseFont;
-@headerFont: 'Rubik', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, 'Lato', "Helvetica Neue", Arial, sans-serif;
-@titleFont: 'Rubik', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, 'Lato', "Helvetica Neue", Arial, sans-serif;

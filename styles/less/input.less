@@ -55,7 +55,9 @@ button,
 .btn,
 [href].btn,
 [type="submit"] {
-  background: @lightestColor;
+  position: relative;
+
+  background: transparent;
   color: @mediumColor;
   border: 2px solid rgba(0,0,0,0.1);
   border-radius: @radius;
@@ -68,11 +70,11 @@ button,
   min-width: 64px;
   padding: (@gap * 0.5) @gap;
   font-size: @fontSizeSmall;
-  line-height: 1;
+  // line-height: 1;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 
-  margin-bottom: @gap;
+  // margin-bottom: @gap;
 
   @media (min-width: 480px) {
     display: inline-block;
@@ -83,8 +85,29 @@ button,
     margin-right: (@gapS / 2);
   }
 
-  &.btn-full {
-    width: 100%;
+  &.btn-fancy {
+    &:before {
+      content: '';
+      display: block;
+      transform-origin: center bottom;
+      transform: scale3d(1, 0, 1);
+      transition: transform .25s ease;
+      position: absolute;
+      top: 0;
+      right: -1px;
+      width: calc(100% + 1px);
+      height: 100%;
+      // border-radius: @radius;
+      background-color: @primaryColor;
+    }
+
+    &:hover:before {
+      transform: scale3d(1, 1, 1);
+    }
+
+    span {
+      position: relative;
+    }
   }
 
   &.btn-primary {
@@ -100,10 +123,14 @@ button,
   }
 
   &:hover,
-  &:focus {
-    background-color: @primaryColor;
+  &:focus,
+  &:active {
     border-color: @primaryColor;
-    color: @lightestColor;
+    color: @primaryColor;
+
+    &.btn-fancy {
+      color: @lightestColor;
+    }
 
     &.btn-primary {
       color: @primaryColor;
@@ -114,23 +141,6 @@ button,
       background-color: @secondaryColor;
       border-color: @secondaryColor;
       color: @lightestColor;
-    }
-  }
-
-  &:active {
-    background-color: darken(@lightColor, 10%);
-
-    &.btn-primary {
-      background-color: darken(@secondaryColor, 10%);
-    }
-
-    &.btn-secondary {
-      color: @lightestColor;
-      background-color: @secondaryColor;
-
-      > span {
-        color: @lightestColor;
-      }
     }
   }
 }
