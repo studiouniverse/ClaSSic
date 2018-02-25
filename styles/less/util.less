@@ -17,8 +17,9 @@
   .sticky@{prefix} {
     position: sticky;
     z-index: 10;
-    top: 0;
+    top: -1px; // sometimes there's a rendering issue with 0px
     left: 0;
+    backface-visibility: hidden;
   }
 
   .fixed@{prefix} {
@@ -26,6 +27,11 @@
     z-index: 12;
     top: 0;
     left: 0;
+    backface-visibility: hidden;
+  }
+
+  .shadow@{prefix} {
+    box-shadow: 0px 2px 10px 0 rgba(0,0,0,0.1);
   }
 
   .text@{prefix}-lower {
@@ -34,6 +40,10 @@
 
   .text@{prefix}-upper {
     text-transform: uppercase;
+  }
+
+  .text@{prefix}-underline {
+    text-decoration: underline;
   }
 
   .text@{prefix}-smaller {
@@ -118,7 +128,7 @@
 
 .generate-utils-misc(@n, @i: 0, @prefix: ~'') when (@i =< @n) {
   .opacity-@{prefix}@{i} {
-    opacity: (@i * 100% / @n);
+    opacity: (@i / @n);
   }
 
   .vh-@{prefix}@{i} {
@@ -167,6 +177,10 @@
   .my-@{prefix}@{i} {
     margin-top: (@gap * @i);
     margin-bottom: (@gap * @i);
+  }
+
+  .bg-size-@{prefix}@{i} {
+    background-size: (@i * 100% / @n);
   }
 
   .generate-utils-misc(@n, (@i + 1), @prefix);

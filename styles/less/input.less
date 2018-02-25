@@ -85,7 +85,8 @@ button,
     margin-right: (@gapS / 2);
   }
 
-  &.btn-fancy {
+  &.btn-fancy,
+  &.btn-flat {
     &:before {
       content: '';
       display: block;
@@ -110,6 +111,24 @@ button,
     }
   }
 
+  &.btn-fancy {
+    @media(max-width: 767px) {
+      color: @lightestColor;
+      border-color: @primaryColor;
+
+      &:before {
+        right: 0;
+        transform: scale3d(1, 1, 1);
+      }
+    }
+  }
+
+  &.btn-flat {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.15);
+  }
+
   &.btn-primary {
     color: @lightestColor;
     background-color: @primaryColor;
@@ -128,7 +147,8 @@ button,
     border-color: @primaryColor;
     color: @primaryColor;
 
-    &.btn-fancy {
+    &.btn-fancy,
+    &.btn-flat {
       color: @lightestColor;
     }
 
@@ -159,12 +179,15 @@ label {
 label .label {
   display: block;
   margin-bottom: @gapS;
-  text-transform: uppercase;
-  letter-spacing: .25rem;
+  // text-transform: uppercase;
+  letter-spacing: .5px;
+  font-weight: 400;
 
   small {
+    font-weight: @fontWeightThin;
     font-size: (@fontSize / 1.5);
     opacity: 0.6;
+    text-transform: uppercase;
   }
 }
 
@@ -230,7 +253,7 @@ input[type="checkbox"] {
   display: inline-block;
   width: @gap;
   height: @gap;
-  margin-left: @gapS;
+  margin-left: @gapXS;
 
   border-color: @mediumColor;
 

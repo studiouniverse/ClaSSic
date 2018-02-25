@@ -9,6 +9,7 @@
 }
 
 .layout {
+  z-index: 2;
   display: block;
   max-width: 100%;
   width: @maxSiteWidth;
@@ -128,7 +129,9 @@
   margin-bottom: 0;
 }
 
-.generate-columns(@n, @i: 1, @prefix: ~'') when (@i =< @n) {
+.generate-columns(@_n, @i: 1, @prefix: ~'') when (@i =< @_n) {
+  @n: 12;
+
   .col-@{prefix}@{i} {
     flex: 0 0 (@i * 100% / @n);
     width: (@i * 100% / @n);
@@ -154,19 +157,49 @@
     max-width: (@i * 100% / @n);
   }
 
-  .generate-columns(@n, (@i + 1), @prefix);
+  .generate-columns(@_n, (@i + 1), @prefix);
 }
 
-.generate-columns(12);
+.generate-columns(16);
 
 @media (min-width: 480px) {
-  .generate-columns(12, 1, ~'sm-');
+  .generate-columns(16, 1, ~'sm-');
 }
 
 @media (min-width: 768px) {
-  .generate-columns(12, 1, ~'md-');
+  .generate-columns(16, 1, ~'md-');
 }
 
 @media (min-width: 1024px) {
-  .generate-columns(12, 1, ~'lg-');
+  .generate-columns(16, 1, ~'lg-');
+}
+
+.layout.layout-horizontal {
+  .group {
+    cursor: -webkit-grab;
+    cursor: grab;
+    padding: @gapXL @gap;
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    [class*="col-"] {
+      display: block;
+      position: relative;
+      max-width: none;
+
+      // flex: 0 0 auto;
+
+      touch-action: none !important;
+      user-select: none !important;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+
+      .inner {
+        padding: @gapHuge @gap;
+      }
+    }
+  }
 }

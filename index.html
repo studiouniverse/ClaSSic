@@ -15,53 +15,51 @@
 
 <link rel="shortcut icon" href="https://studiouniverse.co/images/favicon.png?c=1">
 
-<link href='https://fonts.googleapis.com/css?family=Rubik:300,400,600|Chivo:300,400,600' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="styles/index.css?v=0.8">
 
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body id="top">
-  <header class="bg-lightest">
+  <header class="bg-lightest py-0">
     <div class="layout layout-fluid">
       <div class="group group-center">
-        <div class="col-3 col-md-1 mb-0 py-md-0 text-left">
-          <a class="block" href="/">
-            <figure class="logo mb-0">
-              <img src="images/logo.png" alt="Logo" style="max-width:36px;">
-              <span hidden>Classic</span>
-            </figure>
-          </a>
+        <div class="col-6 col-md-2 py-md-0 mb-0">
+          <h4>Classic</h4>
         </div>
-        <div class="col-9 col-md-5 push-md-6 mb-0 py-sm-0 text-right text-sm-right">
-          <a class="btn btn-fancy" href=""><i hidden class="fal fa-mobile-android"></i> <span>Phone Me</span></a><a class="btn btn-fancy" href=""><i hidden class="fal fa-paper-plane"></i> <span>Email Me</span></a>
+        <div class="col-6 hidden-md text-right mb-0 py-md-0">
+          <a class="btn btn-flat"><span>Browse <i class="fas fa-chevron-down"></i></span></a>
         </div>
-        <div class="col-12 col-md-6 mb-0 pt-2 py-md-0 pull-md-5 text-left">
+        <div class="col-12 hidden block-md col-md-7 mb-0 py-md-0 text-left">
           <nav class="nav-longer nav-md-inline">
             <ul class="menu">
-              <li class="menu-item"><a href="#services" class="text-dark">Services</a></li>
-              <li class="menu-item"><a href="#case-studies" class="text-dark">Case Studies</a></li>
-              <li class="menu-item"><a href="#culture" class="text-dark">About Us</a></li>
+              <li class="menu-item current-menu-item"><a href="#services" class="text-dark">Overview</a></li>
+              <li class="menu-item"><a href="#services" class="text-medium">Services</a></li>
+              <li class="menu-item"><a href="#case-studies" class="text-medium">Case Studies</a></li>
+              <li class="menu-item"><a href="#culture" class="text-medium">About Us</a></li>
             </ul>
           </nav>
+        </div>
+        <div class="col-12 col-md-3 hidden block-md text-right py-md-0 mb-0">
+          <a class="btn btn-primary" href=""><i hidden class="fal fa-mobile-android"></i> <span>Buy</span></a>
         </div>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="billboard">
+    <section class="billboard bg-anchor-bottom-right bg-size-8 text-dark" style="background-image:url(https://images.apple.com/v/iphone-x/e/images/overview/primary/design_hero_large_2x.jpg)">
+      <div class="overlay bg-lightest opacity-4"></div>
       <div class="layout">
-        <h1>You stay classy, San Diego.</h1>
+        <h1><strong>Shaken.</strong> Not stirred.</h1>
         <p><strong>Classic</strong> is a friendly CSS library for creating classy websites.</p>
       </div>
     </section>
 
-    <section class="pb-0">
+    <section class="bg-dark text-lightest mt-0">
       <div class="layout">
-        <h2>"60% of the time, it works every time."</h2>
         <div class="layout layout-content">
           <p>Classic has everything you need to get started. It might be opinionated and bloated, but let's face it, that usually makes your life easier.</p>
-          <p>It's in active development, so stick to <em>look but don't touch</em> now and maybe forever... It's been built for me. Not you.</p>
+          <p>Classic has been built for internal use, so currently ships without any documentation or support.</p>
         </div>
       </div>
     </section>
@@ -73,6 +71,9 @@
         <div class="panel">
           <p>Highlight content with embedded panels.</p>
         </div>
+        <div class="panel bg-alt notch-primary text-lightest">
+          <p>Use classes to change colours.</p>
+        </div>
         <blockquote class="notch-primary">Emphasise content with blockquotes.</blockquote>
         <pre>
           <code><span>&lt;div&gt;Show off your sweet code.&lt;/div&gt;</span><span>&lt;div&gt;By using a code element.&lt;/div&gt;</span></code>
@@ -80,61 +81,74 @@
       </div>
     </section>
 
-    <section class="bg-alt text-lightest">
-      <div class="layout">
-        <h3>This is a standard section.</h3>
-        <p>But I made it blue so people know you mean business.</p>
-        <div class="panel bg-primary">
-          <p>Use classes to change colours.</p>
-        </div>
-        <div class="panel bg-secondary text-dark">
-          <p>Use classes to change colours.</p>
-        </div>
-        <div class="panel bg-dark notch-info text-info">
-          <p>Use classes to change colours.</p>
+    <section class="bg-dark py-3">
+      <div class="layout layout-fluid layout-horizontal">
+        <div class="group">
+          <div class="col-15 col-sm-8 col-md-7 col-lg-5 align-center text-center text-lightest">
+            <div class="inner" style="background-image:url(images/decking.jpg)">
+              <div class="overlay bg-dark opacity-2"></div>
+              <h3>Column one.</h3>
+              <p class="text-larger"><a href="#" class="text-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+            </div>
+          </div>
+          <div class="col-15 col-sm-8 col-md-7 col-lg-5 align-center text-center text-lightest">
+            <div class="inner" style="background-image:url(images/decking.jpg)">
+              <div class="overlay bg-dark opacity-2"></div>
+              <h3>Column two.</h3>
+              <p class="text-larger"><a href="#" class="text-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+            </div>
+          </div>
+          <div class="col-15 col-sm-8 col-md-7 col-lg-5 align-center text-center text-lightest">
+            <div class="inner" style="background-image:url(images/decking.jpg)">
+              <div class="overlay bg-dark opacity-2"></div>
+              <h3>Column three.</h3>
+              <p class="text-larger"><a href="#" class="text-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+            </div>
+          </div>
+          <div class="col-15 col-sm-8 col-md-7 col-lg-5 align-center text-center text-lightest">
+            <div class="inner" style="background-image:url(images/decking.jpg)">
+              <div class="overlay bg-dark opacity-2"></div>
+              <h3>Column four.</h3>
+              <p class="text-larger"><a href="#" class="text-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+            </div>
+          </div>
+          <div class="col-15 col-sm-8 col-md-7 col-lg-5 align-center text-center text-lightest">
+            <div class="inner" style="background-image:url(images/decking.jpg)">
+              <div class="overlay bg-dark opacity-2"></div>
+              <h3>Column five.</h3>
+              <p class="text-larger"><a href="#" class="text-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="panel text-center text-md-right text-lightest mt-6" style="background-image:url(images/bg.jpg)">
-      <div class="layout pt-12 align-right">
-        <div class="layout-content">
-          <h3>This panel has little gaps.</h3>
-          <h3>Just look at them.</h3>
-        </div>
-      </div>
-    </section>
-
-    <section>
+    <section class="mt-0 bg-light">
       <div class="layout layout-widescreen">
-        <div class="panel">
-          <div class="group">
-            <div class="col-6 col-lg-3 align-center text-center">
-              <figure class="img-medium"><img src="images/logo.png"/></figure>
-              <p>Column one.</p>
-              <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
-            </div>
-            <div class="col-6 col-lg-3 align-center text-center">
-              <figure class="img-medium"><img src="images/logo.png"/></figure>
-              <p>Column two.</p>
-              <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
-            </div>
-            <div class="col-6 col-lg-3 align-center text-center">
-              <figure class="img-medium"><img src="images/logo.png"/></figure>
-              <p>Column three.</p>
-              <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
-            </div>
-            <div class="col-6 col-lg-3 align-center text-center">
-              <figure class="img-medium"><img src="images/logo.png"/></figure>
-              <p>Column four.</p>
-              <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
-            </div>
+        <div class="group">
+          <div class="col-6 col-lg-3 align-center text-center">
+            <figure class="img-medium"><img src="images/logo.png"/></figure>
+            <p>Column one.</p>
+            <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
           </div>
-
-          <div class="text-center">
-            <h3>"Heck, I’m not even mad... that’s amazing."</h3>
-            <p>Of course it has a 12 step grid (built with Flex).</p>
+          <div class="col-6 col-lg-3 align-center text-center">
+            <figure class="img-medium"><img src="images/logo.png"/></figure>
+            <p>Column two.</p>
+            <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
           </div>
+          <div class="col-6 col-lg-3 align-center text-center">
+            <figure class="img-medium"><img src="images/logo.png"/></figure>
+            <p>Column three.</p>
+            <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
+          </div>
+          <div class="col-6 col-lg-3 align-center text-center">
+            <figure class="img-medium"><img src="images/logo.png"/></figure>
+            <p>Column four.</p>
+            <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
+          </div>
+        </div>
+        <div class="text-center mt-6">
+          <p>It comes with a 12 step grid layout, and you can overflow the columns into a horizontal gallery.</p>
         </div>
       </div>
     </section>
@@ -166,26 +180,26 @@
       <div class="layout">
         <div class="group group-center text-light">
           <div class="col-md-6">
-            <h3>Cambridge, UK</h3>
+            <h4>Cambridge, UK</h4>
           </div>
           <div class="col-md-6 text-md-right">
-            <h3><a href="tel:" class="text-lightest">+44 (0) 1223 123456</a></h3>
+            <h4><a href="tel:" class="text-lightest">+44 (0) 1223 123456</a></h4>
           </div>
         </div>
         <div class="group group-center text-light">
           <div class="col-md-6">
-            <h3>New York, NY</h3>
+            <h4>New York, NY</h4>
           </div>
           <div class="col-md-6 text-md-right">
-            <h3><a href="tel:" class="text-lightest">+1 (0) 1223 123456</a></h3>
+            <h4><a href="tel:" class="text-lightest">+1 (0) 1223 123456</a></h4>
           </div>
         </div>
         <div class="group group-center text-light">
           <div class="col-md-6">
-            <h3>LA, California</h3>
+            <h4>LA, California</h4>
           </div>
           <div class="col-md-6 text-md-right">
-            <h3><a href="tel:" class="text-lightest">+1 (0) 1223 123456</a></h3>
+            <h4><a href="tel:" class="text-lightest">+1 (0) 1223 123456</a></h4>
           </div>
         </div>
       </div>
@@ -313,6 +327,7 @@
     </div>
   </footer>
 
-  <script type="text/javascript" src="scripts/hermes.js"></script>
+  <script type="text/javascript" src="scripts/hermes-min.js"></script>
+  <script type="text/javascript" src="scripts/classic.js"></script>
 </body>
 </html>

@@ -51,6 +51,24 @@ nav {
       &:last-child {
         margin-right: 0;
       }
+
+      a {
+        padding: 0;
+
+        &:hover,
+        &:focus {
+          background-color: transparent;
+        }
+      }
+
+      &.current,
+      &.current-menu-item {
+        border-bottom: 2px solid @primaryColor;
+
+        a {
+          opacity: 0.4;
+        }
+      }
     }
   }
 
