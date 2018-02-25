@@ -2234,6 +2234,9 @@ th {
 .text-regular {
   font-size: 1.8rem;
 }
+.text-inherit {
+  font-size: inherit;
+}
 .text-larger {
   font-size: 2.2rem;
 }
@@ -2310,6 +2313,9 @@ th {
   }
   .text-sm-regular {
     font-size: 1.8rem;
+  }
+  .text-sm-inherit {
+    font-size: inherit;
   }
   .text-sm-larger {
     font-size: 2.2rem;
@@ -2389,6 +2395,9 @@ th {
   .text-md-regular {
     font-size: 1.8rem;
   }
+  .text-md-inherit {
+    font-size: inherit;
+  }
   .text-md-larger {
     font-size: 2.2rem;
   }
@@ -2466,6 +2475,9 @@ th {
   }
   .text-lg-regular {
     font-size: 1.8rem;
+  }
+  .text-lg-inherit {
+    font-size: inherit;
   }
   .text-lg-larger {
     font-size: 2.2rem;
