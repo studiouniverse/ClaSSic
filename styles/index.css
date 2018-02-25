@@ -2516,11 +2516,7 @@ button i,
 button.btn-fancy:before,
 .btn.btn-fancy:before,
 [href].btn.btn-fancy:before,
-[type="submit"].btn-fancy:before,
-button.btn-flat:before,
-.btn.btn-flat:before,
-[href].btn.btn-flat:before,
-[type="submit"].btn-flat:before {
+[type="submit"].btn-fancy:before {
   content: '';
   display: block;
   -webkit-transform-origin: center bottom;
@@ -2541,22 +2537,14 @@ button.btn-flat:before,
 button.btn-fancy:hover:before,
 .btn.btn-fancy:hover:before,
 [href].btn.btn-fancy:hover:before,
-[type="submit"].btn-fancy:hover:before,
-button.btn-flat:hover:before,
-.btn.btn-flat:hover:before,
-[href].btn.btn-flat:hover:before,
-[type="submit"].btn-flat:hover:before {
+[type="submit"].btn-fancy:hover:before {
   -webkit-transform: scale3d(1, 1, 1);
           transform: scale3d(1, 1, 1);
 }
 button.btn-fancy span,
 .btn.btn-fancy span,
 [href].btn.btn-fancy span,
-[type="submit"].btn-fancy span,
-button.btn-flat span,
-.btn.btn-flat span,
-[href].btn.btn-flat span,
-[type="submit"].btn-flat span {
+[type="submit"].btn-fancy span {
   position: relative;
 }
 @media (max-width: 767px) {
@@ -2582,8 +2570,6 @@ button.btn-flat,
 [type="submit"].btn-flat {
   background-color: transparent;
   border-color: transparent;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
 }
 button.btn-primary,
 .btn.btn-primary,
@@ -2627,7 +2613,9 @@ button:focus.btn-fancy,
 button:active.btn-fancy,
 .btn:active.btn-fancy,
 [href].btn:active.btn-fancy,
-[type="submit"]:active.btn-fancy,
+[type="submit"]:active.btn-fancy {
+  color: #ffffff;
+}
 button:hover.btn-flat,
 .btn:hover.btn-flat,
 [href].btn:hover.btn-flat,
@@ -2640,7 +2628,9 @@ button:active.btn-flat,
 .btn:active.btn-flat,
 [href].btn:active.btn-flat,
 [type="submit"]:active.btn-flat {
-  color: #ffffff;
+  color: inherit;
+  background-color: #f0f0f0;
+  border-color: transparent;
 }
 button:hover.btn-primary,
 .btn:hover.btn-primary,

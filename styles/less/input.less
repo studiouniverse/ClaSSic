@@ -85,8 +85,7 @@ button,
     margin-right: (@gapS / 2);
   }
 
-  &.btn-fancy,
-  &.btn-flat {
+  &.btn-fancy {
     &:before {
       content: '';
       display: block;
@@ -126,7 +125,7 @@ button,
   &.btn-flat {
     background-color: transparent;
     border-color: transparent;
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.15);
+    // box-shadow: 0 1px 4px 0 rgba(0,0,0,0.15);
   }
 
   &.btn-primary {
@@ -147,9 +146,14 @@ button,
     border-color: @primaryColor;
     color: @primaryColor;
 
-    &.btn-fancy,
-    &.btn-flat {
+    &.btn-fancy {
       color: @lightestColor;
+    }
+
+    &.btn-flat {
+      color: inherit;
+      background-color: @lightColor;
+      border-color: transparent;
     }
 
     &.btn-primary {
