@@ -173,7 +173,6 @@ button,
 select,
 textarea {
   max-width: 100%;
-  line-height: inherit;
   background-color: @lightColor;
   border: thin solid darken(@lightColor, 2);
   border-radius: @radius;
@@ -181,6 +180,9 @@ textarea {
   color: @darkColor;
   vertical-align: middle;
   outline: none;
+
+  font-size: @fontSizeFormInput; // stop zoom in on iOS
+  line-height: inherit;
 
   transition: background .3s, border .3s;
 
@@ -229,6 +231,8 @@ input[type="checkbox"] {
   width: @gap;
   height: @gap;
   margin-left: @gapS;
+
+  border-color: @mediumColor;
 
   &:hover,
   &:focus,
@@ -285,7 +289,7 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: .5rem;
-  font-size: 1.5rem;
+  font-size: @fontSizeSmall;
   line-height: inherit;
 }
 

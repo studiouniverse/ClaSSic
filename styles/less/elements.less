@@ -91,17 +91,26 @@ pre {
       display: block;
       counter-increment: listing;
       white-space: nowrap;
+      padding-right: @gap;
 
       &:before {
         content: counter(listing, decimal-leading-zero) " ";
         display: inline-block;
         pointer-events: none;
-        color: @primaryColor;
         user-select: none;
+        color: @primaryColor;
         border-right: 2px solid @primaryColor;
         margin-right: @gap;
         padding-right: @gap;
         text-align: right;
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        pointer-events: none;
+        user-select: none;
+        padding-right: @gap;
       }
     }
   }
