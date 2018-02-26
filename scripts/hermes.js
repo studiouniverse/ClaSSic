@@ -412,11 +412,11 @@
     };
 
     updateObject.preUpdate = function() {
-      if (updateObject.updateOnScroll) {
+      if (updateObject.updateOnScroll && !updateObject._scrolled) {
         updateObject._scrolled = $._scrolled;
       }
 
-      if (updateObject.updateOnResize) {
+      if (updateObject.updateOnResize && !updateObject._resized) {
         updateObject._resized = $._resized;
       }
 

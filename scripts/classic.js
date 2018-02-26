@@ -1,5 +1,5 @@
 
-// -- Toggle
+// -- Click toggles
 
 (function() {
   $(["[data-toggle]"]).forEach(function($el) {
@@ -98,9 +98,9 @@
 // -- Scroll fade in
 
 (function() {
-  var $fadeEls = $(["[data-fade-in]"]);
-
   function checkFaders() {
+    var $fadeEls = $(["[data-fade-in]:not(.fading)"]);
+
     $fadeEls.forEach(function($fader) {
       var bounds = $fader.getBounds();
       var delay = parseInt($fader.attr("data-fade-delay") || 0);
@@ -125,11 +125,9 @@
         }
       }
     });
-
-    $fadeEls = $(["[data-fade-in]:not(.fading)"]);
   }
 
-  checkFaders();
+  // checkFaders();
 
   $.addUpdate({
     updateOnScroll: true,
@@ -142,51 +140,39 @@
 // -- Google analytics scroll-in-view
 
 (function() {
-  var $fadeEls = $(["[data-fade-in]"]);
+  function checkTrackers() {
+    var $trackEls = $(["[data-track-scroll]"]);
 
-  function checkFaders() {
-    $fadeEls = $(["[data-fade-in]:not(.fading)"]);
-
-    $fadeEls.forEach(function($fader) {
-      var bounds = $fader.getBounds();
-      var delay = parseInt($fader.attr("data-fade-delay") || 0);
+    $trackEls.forEach(function($tracker) {
+      var bounds = $tracker.getBounds();
+      var id = $tracker.attr("data-track-scroll");
 
       if (bounds.top < 0) {
-        if (delay > 0) {
-          setTimeout(function() {
-            $fader.classList.add("fading");
-            $fader.classList.add("faded");
-          }, delay);
-        } else {
-          $fader.classList.add("fading");
-          $fader.classList.add("faded");
-        }
+        window.ga('set', id, 'above-view');
       } else if (bounds.top >= 0 && bounds.top + (bounds.height / 2) <= $.screenHeight) {
-        if (delay > 0) {
-          setTimeout(function() {
-            $fader.classList.add("fading");
-          }, delay);
-        } else {
-          $fader.classList.add("fading");
-        }
+        window.ga('set', id, 'in-view');
       }
+
+      $tracker.attr("!data-track-scroll");
     });
   }
 
-  checkFaders();
+  if (window.ga) {
+    checkTrackers();
 
-  $.addUpdate({
-    updateOnScroll: true,
-    draw: function() {
-      checkFaders();
-    }
-  });
+    $.addUpdate({
+      updateOnScroll: true,
+      draw: function() {
+        checkTrackers();
+      }
+    });
+  }
 })();
 
 // -- Group carousels
 
 (function() {
-  $([".group.carousel"]).forEach(function($el) {
+  $([".carousel"]).forEach(function($el) {
 
     var $dots = $el.find([".carousel-controls-dots li"]);
     var $slidesLeft = $el.find([".carousel-details .slide"]);

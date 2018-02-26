@@ -473,7 +473,7 @@ html {
   direction: ltr;
   text-align: left;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   html {
     font-size: 8px;
   }
@@ -664,7 +664,7 @@ abbr[data-original-title] {
     padding-bottom: 0 ;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .group .group [class*="col-md-"] {
     padding-top: 0;
     padding-bottom: 0 ;
@@ -1350,7 +1350,7 @@ abbr[data-original-title] {
     max-width: 133.33333333%;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .col-md-1 {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 8.33333333%;
@@ -2114,7 +2114,7 @@ pre {
           box-shadow: inset -2px 0 20px -6px rgba(0, 0, 0, 0.17);
   margin-bottom: 1.8rem;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .billboard {
     padding: 21.6rem 0;
   }
@@ -2315,7 +2315,7 @@ nav.nav-inline ul li.current a,
 nav.nav-inline ul li.current-menu-item a {
   opacity: 0.5;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   nav.nav-md-inline ul li {
     display: inline-block;
     margin-right: 1.8rem;
@@ -2744,7 +2744,7 @@ input[type="checkbox"] {
   height: 1.8rem;
   margin-left: 0.45rem;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   input[type="radio"],
   input[type="checkbox"] {
     border-color: #c9c0b2;
@@ -2863,7 +2863,7 @@ th {
 .editorial {
   position: relative;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .editorial .editorial-article-bg {
     content: '';
     position: absolute;
@@ -2903,13 +2903,13 @@ th {
 .editorial .group .article article p {
   line-height: 1.8;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .editorial .group .article {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .editorial .group .article {
     margin: 0;
     border-top-right-radius: 5px;
@@ -2927,13 +2927,13 @@ th {
 .editorial .group .aside aside {
   padding: 1.8rem;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .editorial .group .aside {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .editorial .group .aside {
     margin: 0;
     margin-top: 5.4rem;
@@ -2948,7 +2948,7 @@ th {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .masonry .group {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2965,14 +2965,14 @@ th {
   margin-bottom: 0;
   min-height: 30vh;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .masonry .group > div:nth-child(3n) {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .masonry .group > div {
     width: 50%;
     height: auto;
@@ -3077,7 +3077,7 @@ th {
 .carousel .group [class*="col-"]:first-child {
   margin-bottom: 1.8rem;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .carousel .group [class*="col-"] {
     height: 60vw;
     max-height: 59.4rem;
@@ -3343,7 +3343,7 @@ th {
     background-position: right bottom;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .block-md {
     display: block;
   }
@@ -4735,7 +4735,7 @@ th {
     background-size: 100%;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .opacity-md-0 {
     opacity: 0;
   }
