@@ -120,6 +120,10 @@
   .generate-utils(~'-sm');
 }
 
+@media @max-medium-screen {
+  .generate-utils(~'-md-down');
+}
+
 @media @medium-screen {
   .generate-utils(~'-md');
 }
@@ -198,6 +202,10 @@
 
 @media (min-width: 480px) {
   .generate-utils-misc(12, 0, ~'sm-');
+}
+
+@media @max-medium-screen {
+  .generate-utils-misc(12, 0, ~'md-down-');
 }
 
 @media @medium-screen {
