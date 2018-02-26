@@ -13,7 +13,7 @@
 
   > div {
     padding: @gapS;
-    margin-bottom: @gap;
+    margin-bottom: 0;
     min-height: 30vh;
 
     @media (max-width: 767px) {
@@ -52,6 +52,8 @@
     cursor: grab;
     padding-top: @gapL;
     padding-bottom: @gapL;
+    margin-left: -@gap;
+    margin-right: -@gap;
     overflow-y: hidden;
     display: flex;
     flex-wrap: nowrap;
@@ -64,11 +66,6 @@
       position: relative;
       max-width: none;
 
-      // padding-left: 0;
-      // padding-right: @gapXL;
-
-      // flex: 0 0 auto;
-
       touch-action: none !important;
       user-select: none !important;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
@@ -76,6 +73,14 @@
       .inner {
         border-radius: @radius;
         padding: @gapHuge @gap;
+      }
+
+      &:first-child {
+        padding-left: @gap;
+      }
+
+      &:last-child {
+        padding-right: @gap;
       }
     }
   }
