@@ -25,7 +25,9 @@ main,
 .panel,
 .billboard,
 blockquote,
-section {
+section,
+.slide,
+.slide > div {
   max-width: 100%;
 
   .layout:last-of-type > *:last-child,
@@ -45,6 +47,7 @@ section,
 .billboard,
 pre,
 .inner,
+.slide,
 .masonry div,
 [class*="col-"] {
   background-size: cover;
@@ -63,6 +66,10 @@ pre {
   padding: (@gapGigantic + @gapXL) 0;
   box-shadow: inset -2px 0 20px -6px rgba(0, 0, 0, 0.17);
   margin-bottom: @gapL;
+
+  @media (max-width: 767px) {
+    padding: (@gapGigantic) 0;
+  }
 
   &:after {
     content: '';

@@ -2111,7 +2111,9 @@ main,
 .panel,
 .billboard,
 blockquote,
-section {
+section,
+.slide,
+.slide > div {
   max-width: 100%;
 }
 header .layout:last-of-type > *:last-child,
@@ -2121,13 +2123,17 @@ main .layout:last-of-type > *:last-child,
 .billboard .layout:last-of-type > *:last-child,
 blockquote .layout:last-of-type > *:last-child,
 section .layout:last-of-type > *:last-child,
+.slide .layout:last-of-type > *:last-child,
+.slide > div .layout:last-of-type > *:last-child,
 header > *:last-child,
 footer > *:last-child,
 main > *:last-child,
 .panel > *:last-child,
 .billboard > *:last-child,
 blockquote > *:last-child,
-section > *:last-child {
+section > *:last-child,
+.slide > *:last-child,
+.slide > div > *:last-child {
   margin-bottom: 0;
 }
 section,
@@ -2140,6 +2146,7 @@ section,
 .billboard,
 pre,
 .inner,
+.slide,
 .masonry div,
 [class*="col-"] {
   background-size: cover;
@@ -2157,6 +2164,11 @@ pre {
   -webkit-box-shadow: inset -2px 0 20px -6px rgba(0, 0, 0, 0.17);
           box-shadow: inset -2px 0 20px -6px rgba(0, 0, 0, 0.17);
   margin-bottom: 2.7rem;
+}
+@media (max-width: 767px) {
+  .billboard {
+    padding: 21.6rem 0;
+  }
 }
 .billboard:after {
   content: '';
@@ -2529,8 +2541,8 @@ button.btn-fancy:before,
   transition: transform .25s ease, -webkit-transform .25s ease;
   position: absolute;
   top: 0;
-  right: -1px;
-  width: calc(101%);
+  right: 0;
+  width: 100%;
   height: 100%;
   background-color: #007bff;
 }
@@ -2744,7 +2756,12 @@ input[type="checkbox"] {
   width: 1.8rem;
   height: 1.8rem;
   margin-left: 0.45rem;
-  border-color: #666;
+}
+@media (max-width: 767px) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    border-color: #666;
+  }
 }
 input[type="radio"]:hover,
 input[type="checkbox"]:hover,
@@ -2825,6 +2842,114 @@ caption {
 }
 th {
   text-align: left;
+}
+.group.carousel [class*="col-"] {
+  position: relative;
+  min-height: 48vh;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+.group.carousel [class*="col-"] .slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1.8rem;
+  right: 1.8rem;
+  width: auto;
+  height: auto;
+  margin: auto;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f0f0f0;
+  opacity: 0;
+  -webkit-transition: opacity .6s;
+  transition: opacity .6s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.group.carousel [class*="col-"] .slide.active {
+  opacity: 1;
+  z-index: 4;
+}
+@media (min-width: 768px) {
+  .group.carousel [class*="col-"] {
+    height: 60vw;
+    max-height: 59.4rem;
+  }
+  .group.carousel [class*="col-"]:first-child .slide {
+    left: 0.9rem;
+  }
+  .group.carousel [class*="col-"]:last-child .slide {
+    right: 0.9rem;
+  }
+}
+.group.carousel [class*="col-"] .carousel-controls-dots {
+  position: absolute;
+  bottom: 1.8rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 5;
+}
+.group.carousel [class*="col-"] .carousel-controls-dots ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.group.carousel [class*="col-"] .carousel-controls-dots ul li {
+  display: inline-block;
+  margin-right: 1.8rem;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: #666;
+  border-radius: 100%;
+  cursor: pointer;
+  -webkit-transition: border .4s, background .4s;
+  transition: border .4s, background .4s;
+}
+.group.carousel [class*="col-"] .carousel-controls-dots ul li:last-child {
+  margin-right: 0;
+}
+.group.carousel [class*="col-"] .carousel-controls-dots ul li.active {
+  background-color: transparent;
+  border: 2px solid #666;
+}
+.group.carousel [class*="col-"] .carousel-arrow-left,
+.group.carousel [class*="col-"] .carousel-arrow-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 3.6rem;
+  margin: auto;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.group.carousel [class*="col-"] .carousel-arrow-left {
+  left: 0.9rem;
+}
+.group.carousel [class*="col-"] .carousel-arrow-right {
+  right: 1.8rem;
 }
 .block {
   display: block;

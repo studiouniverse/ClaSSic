@@ -16,8 +16,6 @@
 <link rel="shortcut icon" href="https://studiouniverse.co/images/favicon.png?c=1">
 
 <link rel="stylesheet" href="styles/index.css?v=0.8">
-
-<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body id="top">
   <header class="bg-lightest py-0">
@@ -26,30 +24,30 @@
         <div class="col-6 col-md-2 py-md-0 mb-0">
           <h4>Classic</h4>
         </div>
-        <div class="col-6 hidden-md text-right mb-0 py-md-0">
+        <div class="col-6 hidden-md text-right mb-0 py-md-0" aria-hidden>
           <a class="btn btn-flat"><span>Browse <i class="fas fa-chevron-down"></i></span></a>
         </div>
         <div class="col-12 hidden block-md col-md-7 mb-0 py-md-0 text-left">
           <nav class="nav-longer nav-md-inline">
             <ul class="menu">
               <li class="menu-item current-menu-item"><a href="#services" class="text-dark">Overview</a></li>
-              <li class="menu-item"><a href="#services" class="text-medium">Services</a></li>
+              <li class="menu-item"><a href="#products" class="text-medium">Products</a></li>
               <li class="menu-item"><a href="#case-studies" class="text-medium">Case Studies</a></li>
               <li class="menu-item"><a href="#culture" class="text-medium">About Us</a></li>
             </ul>
           </nav>
         </div>
         <div class="col-12 col-md-3 hidden block-md text-right py-md-0 mb-0">
-          <a class="btn btn-primary" href=""><i hidden class="fal fa-mobile-android"></i> <span>Buy</span></a>
+          <a class="btn btn-fancy" href=""><i hidden class="fal fa-mobile-android"></i> <span>Buy</span></a>
         </div>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="billboard bg-anchor-bottom-right bg-size-8 text-dark" style="background-image:url(https://images.apple.com/v/iphone-x/e/images/overview/primary/design_hero_large_2x.jpg)">
+    <section class="billboard bg-anchor-bottom-right bg-size-12 bg-size-md-8 text-dark" style="background-image:url(images/iphonex.jpg)">
       <div class="overlay bg-lightest opacity-4"></div>
-      <div class="layout" data-fade>
+      <div class="layout">
         <h1><strong>Shaken.</strong> Not stirred.</h1>
         <p><strong>Classic</strong> is a friendly CSS library for creating classy websites.</p>
       </div>
@@ -57,7 +55,7 @@
 
     <section class="bg-light mt-0">
       <div class="layout layout-content">
-        <div class="text-larger text-center align-center">
+        <div class="text-larger text-center align-center" data-fade>
           <p>Classic has everything you need to get started. It might be opinionated and bloated, but let's face it, that usually makes your life easier.</p>
           <p>Classic has been built for internal use, so currently ships without any documentation or support.</p>
         </div>
@@ -66,13 +64,12 @@
 
     <section>
       <div class="layout">
-        <h3>"Don’t act like you’re not impressed."</h3>
-        <hr/>
+        <h3>Site structure.</h3>
         <p>Use different sections, panels and components to break up your content.</p>
         <div class="panel">
           <p>Highlight content with embedded panels.</p>
         </div>
-        <div class="panel bg-alt notch-primary text-lightest">
+        <div class="panel bg-primary text-lightest">
           <p>Use classes to change colours.</p>
         </div>
         <blockquote class="notch-primary">Emphasise content with blockquotes.</blockquote>
@@ -82,7 +79,7 @@
       </div>
     </section>
 
-    <section class="bg-light py-3">
+    <section class="bg-light py-3" aria-hidden>
       <div class="layout layout-fluid layout-horizontal">
         <div class="group">
           <div class="col-15 col-sm-8 col-md-7 col-lg-5 align-center text-center text-lightest" data-fade="rtl">
@@ -121,6 +118,7 @@
 
     <section>
       <div class="layout layout-content text-center">
+        <h3>The grid.</h3>
         <p>It comes with a 12 step grid layout, and you can overflow the columns into a horizontal gallery.</p>
       </div>
     </section>
@@ -128,22 +126,22 @@
     <section class="bg-light">
       <div class="layout layout-widescreen">
         <div class="group">
-          <div class="col-6 col-lg-3 align-center text-center">
+          <div class="col-6 col-md-3 col-lg-3 align-center text-center">
             <figure class="img-medium"><img src="images/logo.png"/></figure>
             <p>Column one.</p>
             <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
           </div>
-          <div class="col-6 col-lg-3 align-center text-center">
+          <div class="col-6 col-md-3 col-lg-3 align-center text-center">
             <figure class="img-medium"><img src="images/logo.png"/></figure>
             <p>Column two.</p>
             <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
           </div>
-          <div class="col-6 col-lg-3 align-center text-center">
+          <div class="col-6 col-md-3 col-lg-3 align-center text-center">
             <figure class="img-medium"><img src="images/logo.png"/></figure>
             <p>Column three.</p>
             <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
           </div>
-          <div class="col-6 col-lg-3 align-center text-center">
+          <div class="col-6 col-md-3 col-lg-3 align-center text-center">
             <figure class="img-medium"><img src="images/logo.png"/></figure>
             <p>Column four.</p>
             <p><a href><i class="far fa-arrow-alt-circle-right"></i></a></p>
@@ -154,6 +152,7 @@
 
     <section>
       <div class="layout layout-content text-center">
+        <h3>Masonry blocks.</h3>
         <p>If you have 4 compelling panels, try the special masonry layout.</p>
       </div>
     </section>
@@ -180,6 +179,46 @@
             <p>A masonry panel.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="pt-0">
+      <div class="layout layout-content text-center">
+        <h3>Widgets.</h3>
+        <p>In general, carousels should be avoided because they hide content from the viewer, and are slower to navigate than scrolling. However, the tools below offer a decent experience if you really <em>really</em> have to use one.</p>
+      </div>
+    </section>
+
+    <section class="pt-0">
+      <div class="layout layout-widescreen">
+        <div class="group carousel">
+          <div class="col-12 col-md-6 push-md-6 carousel-images">
+            <div class="slide active" style="background-image:url(images/dog1.jpg)"><div class="absolute py-1 px-1 text-lightest"><h4 data-fade>Rey</h4></div></div>
+            <div class="slide" style="background-image:url(images/dog2.jpg)"><div class="absolute py-1 px-1 text-lightest"><h4 data-fade>Finn</h4></div></div>
+            <div class="slide" style="background-image:url(images/dog3.jpg)"><div class="absolute py-1 px-1 text-lightest"><h4 data-fade>Poe</h4></div></div>
+            <div class="carousel-arrow-left text-lightest">
+              <span><i class="fas fa-chevron-left"></i></span>
+            </div>
+            <div class="carousel-arrow-right text-lightest">
+              <span><i class="fas fa-chevron-right"></i></span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 pull-md-6 carousel-details">
+            <div class="slide active"><div data-fade><h3>Dog one.</h3></div></div>
+            <div class="slide"><div data-fade><h3>Dog two.</h3></div></div>
+            <div class="slide"><div data-fade><h3>Dog three.</h3></div></div>
+            <div class="carousel-controls-dots"><ul>
+              <li class="active"></li><li></li><li></li>
+            </ul></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-0">
+      <div class="layout layout-content text-center">
+        <h3>Making contact.</h3>
+        <p>Make it simple for potential customers to contact you.</p>
       </div>
     </section>
 
@@ -334,7 +373,8 @@
     </div>
   </footer>
 
-  <script type="text/javascript" src="scripts/hermes.js"></script>
-  <script type="text/javascript" src="scripts/classic.js"></script>
+  <script src="scripts/hermes.js"></script>
+  <script src="scripts/classic.js"></script>
+  <script defer src="scripts/fontawesome-min.js"></script>
 </body>
 </html>

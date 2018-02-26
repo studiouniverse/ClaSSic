@@ -68,6 +68,10 @@
 
 // -- Scrolling sub-nav
 
+(function() {
+
+})();
+
 // -- Scroll fade in
 
 (function() {
@@ -95,5 +99,62 @@
     draw: function() {
       checkFaders();
     }
+  });
+})();
+
+// -- Group carousels
+
+(function() {
+  $([".group.carousel"]).forEach(function($el) {
+
+    var $dots = $el.find([".carousel-controls-dots li"]);
+    var $slidesLeft = $el.find([".carousel-details .slide"]);
+    var $slidesRight = $el.find([".carousel-images .slide"]);
+
+    var currentSlide = 0;
+    var numSlides = $dots.length;
+
+    $dots.forEach(function($dot, i) {
+      $dot.on("click", function() {
+        goToSlide(i);
+      });
+    });
+
+    $el.find([".carousel-arrow-left"]).on("click", function() {
+      prevSlide();
+    });
+
+    $el.find([".carousel-arrow-right"]).on("click", function() {
+      nextSlide();
+    });
+
+    function nextSlide() {
+      var newSlide = currentSlide + 1;
+      goToSlide(newSlide);
+    }
+
+    function prevSlide() {
+      var newSlide = currentSlide - 1;
+      goToSlide(newSlide);
+    }
+
+    function goToSlide(i) {
+      if (i >= numSlides) {
+        i = 0;
+      }
+
+      if (i < 0) {
+        i = numSlides - 1;
+      }
+
+      currentSlide = i;
+
+      $el.find([".slide.active", "li.active"]).removeClass("active");
+
+      $slidesLeft[i].addClass("active");
+      $slidesRight[i].addClass("active");
+      $dots[i].addClass("active");
+    }
+
   });
 })();

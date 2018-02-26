@@ -1,0 +1,115 @@
+.group.carousel {
+  [class*="col-"] {
+    position: relative;
+    min-height: 48vh;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+
+    .slide {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: @gap;
+      right: @gap;
+      width: auto;
+      height: auto;
+      margin: auto;
+      z-index: 2;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: @lightColor;
+      opacity: 0;
+      transition: opacity .6s;
+      backface-visibility: hidden;
+
+      &.active {
+        opacity: 1;
+        z-index: 4;
+      }
+    }
+
+    @media (min-width: 768px) {
+      height: 60vw;
+      max-height: (@gapGigantic * 2.75);
+
+      &:first-child {
+        .slide {
+          left: @gapS;
+        }
+      }
+
+      &:last-child {
+        .slide {
+          right: @gapS;
+        }
+      }
+    }
+
+    .carousel-controls-dots {
+      position: absolute;
+      bottom: @gap;
+      left: 0;
+      right: 0;
+      margin: auto;
+      z-index: 5;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+
+        li {
+          display: inline-block;
+          margin-right: @gap;
+          height: @fontSizeSmall;
+          width: @fontSizeSmall;
+          background-color: @mediumColor;
+          border-radius: 100%;
+          cursor: pointer;
+
+          transition: border .4s, background .4s;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &.active {
+            background-color: transparent;
+            border: 2px solid @mediumColor;
+          }
+        }
+      }
+    }
+
+    .carousel-arrow-left,
+    .carousel-arrow-right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: @gapXL;
+      margin: auto;
+      z-index: 5;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      cursor: pointer;
+    }
+
+    .carousel-arrow-left {
+      left: @gapS;
+    }
+
+    .carousel-arrow-right {
+      right: @gap;
+    }
+  }
+}
