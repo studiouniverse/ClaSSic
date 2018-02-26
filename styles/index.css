@@ -2230,9 +2230,10 @@ figure {
 }
 .card figure {
   min-height: 21.6rem;
+  margin-bottom: 0;
 }
 .card article {
-  padding: 0.9rem 1.8rem;
+  padding: 1.8rem 1.8rem;
 }
 .card article .tag {
   text-transform: uppercase;
