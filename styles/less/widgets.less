@@ -1,3 +1,88 @@
+
+// -- Masonry group
+
+.group.masonry {
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    justify-content: center;
+    align-items: center;
+    height: 120vw;
+    max-height: @maxWidescreenWidth;
+  }
+
+  > div {
+    padding: @gapS;
+    margin-bottom: @gap;
+    min-height: 30vh;
+
+    @media (max-width: 767px) {
+      &:nth-child(3n) {
+        order: 4;
+      }
+    }
+
+    @media (min-width: 768px) {
+      width: 50%;
+      height: auto;
+      margin-bottom: 0;
+
+      flex-basis: 42%;
+
+      &:nth-child(3n+1) {
+        flex-basis: 58%;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      flex-basis: 45%;
+
+      &:nth-child(3n+1) {
+        flex-basis: 55%;
+      }
+    }
+  }
+}
+
+// -- Horizontal layout
+
+.layout.layout-horizontal {
+  .group {
+    cursor: -webkit-grab;
+    cursor: grab;
+    padding-top: @gapL;
+    padding-bottom: @gapL;
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    [class*="col-"] {
+      display: block;
+      position: relative;
+      max-width: none;
+
+      // padding-left: 0;
+      // padding-right: @gapXL;
+
+      // flex: 0 0 auto;
+
+      touch-action: none !important;
+      user-select: none !important;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+
+      .inner {
+        border-radius: @radius;
+        padding: @gapHuge @gap;
+      }
+    }
+  }
+}
+
+// -- Carousel
+
 .group.carousel {
   [class*="col-"] {
     position: relative;
@@ -10,8 +95,8 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      left: @gap;
-      right: @gap;
+      left: @gapS;
+      right: @gapS;
       width: auto;
       height: auto;
       margin: auto;
@@ -105,7 +190,7 @@
     }
 
     .carousel-arrow-left {
-      left: @gapS;
+      left: @gap;
     }
 
     .carousel-arrow-right {

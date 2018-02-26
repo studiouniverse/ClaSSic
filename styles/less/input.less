@@ -17,6 +17,10 @@ a {
 
 a[href] {
   color: @primaryColor;
+
+  [class*="fa-"] + span {
+    margin-left: @gapS;
+  }
 }
 
 a[href]:visited,
@@ -81,8 +85,8 @@ button,
     margin-bottom: 0;
   }
 
-  i {
-    margin-right: (@gapS / 2);
+  [class*="fa-"] + span {
+    margin-left: @gapS;
   }
 
   &.btn-fancy {
@@ -108,9 +112,7 @@ button,
     span {
       position: relative;
     }
-  }
 
-  &.btn-fancy {
     @media(max-width: 767px) {
       color: @lightestColor;
       border-color: @primaryColor;
@@ -125,7 +127,10 @@ button,
   &.btn-flat {
     background-color: transparent;
     border-color: transparent;
-    // box-shadow: 0 1px 4px 0 rgba(0,0,0,0.15);
+
+    @media(max-width: 767px) {
+      background-color: @lighterColor;
+    }
   }
 
   &.btn-primary {
