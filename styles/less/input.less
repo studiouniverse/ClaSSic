@@ -63,8 +63,8 @@ button,
 
   background: transparent;
   color: @mediumColor;
-  border: 2px solid rgba(0,0,0,0.1);
-  border-radius: @radius;
+  border: 2px solid @inputBorderColor;
+  border-radius: @inputRadius;
   outline: none;
 
   vertical-align: baseline;
@@ -76,9 +76,7 @@ button,
   font-size: @fontSizeSmall;
   // line-height: 1;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-
-  // margin-bottom: @gap;
+  letter-spacing: @inputLetterSpacing;
 
   @media (min-width: 480px) {
     display: inline-block;
@@ -101,7 +99,7 @@ button,
       right: 0;
       width: 100%;
       height: 100%;
-      // border-radius: @radius;
+      // border-radius: @inputRadius;
       background-color: @primaryColor;
     }
 
@@ -125,15 +123,11 @@ button,
   }
 
   &.btn-flat {
-    background-color: transparent;
+    background-color: @lighterColor;
     border-color: transparent;
 
-    @media(max-width: 767px) {
-      background-color: @lighterColor;
-
-      &.btn-dark {
-        background-color: @darkerColor;
-      }
+    &.btn-dark {
+      background-color: @darkerColor;
     }
   }
 
@@ -161,7 +155,7 @@ button,
 
     &.btn-flat {
       color: inherit;
-      background-color: @lightColor;
+      background-color: transparent;
       border-color: transparent;
     }
 
@@ -211,7 +205,7 @@ textarea {
   max-width: 100%;
   background-color: @lightColor;
   border: thin solid darken(@lightColor, 2);
-  border-radius: @radius;
+  border-radius: @inputRadius;
   padding: @gapXS @gapS;
   color: @darkColor;
   vertical-align: middle;

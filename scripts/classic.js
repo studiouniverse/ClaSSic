@@ -75,21 +75,79 @@
 // -- Scroll fade in
 
 (function() {
-  var $fadeEls = $(["[data-fade]"]);
+  var $fadeEls = $(["[data-fade-in]"]);
 
   function checkFaders() {
     $fadeEls.forEach(function($fader) {
       var bounds = $fader.getBounds();
+      var delay = parseInt($fader.attr("data-fade-delay") || 0);
 
       if (bounds.top < 0) {
-        $fader.classList.add("fading");
-        $fader.classList.add("faded");
+        if (delay > 0) {
+          setTimeout(function() {
+            $fader.classList.add("fading");
+            $fader.classList.add("faded");
+          }, delay);
+        } else {
+          $fader.classList.add("fading");
+          $fader.classList.add("faded");
+        }
       } else if (bounds.top >= 0 && bounds.top + (bounds.height / 2) <= $.screenHeight) {
-        $fader.classList.add("fading");
+        if (delay > 0) {
+          setTimeout(function() {
+            $fader.classList.add("fading");
+          }, delay);
+        } else {
+          $fader.classList.add("fading");
+        }
       }
     });
 
-    $fadeEls = $(["[data-fade]:not(.fading)"]);
+    $fadeEls = $(["[data-fade-in]:not(.fading)"]);
+  }
+
+  checkFaders();
+
+  $.addUpdate({
+    updateOnScroll: true,
+    draw: function() {
+      checkFaders();
+    }
+  });
+})();
+
+// -- Google analytics scroll-in-view
+
+(function() {
+  var $fadeEls = $(["[data-fade-in]"]);
+
+  function checkFaders() {
+    $fadeEls = $(["[data-fade-in]:not(.fading)"]);
+
+    $fadeEls.forEach(function($fader) {
+      var bounds = $fader.getBounds();
+      var delay = parseInt($fader.attr("data-fade-delay") || 0);
+
+      if (bounds.top < 0) {
+        if (delay > 0) {
+          setTimeout(function() {
+            $fader.classList.add("fading");
+            $fader.classList.add("faded");
+          }, delay);
+        } else {
+          $fader.classList.add("fading");
+          $fader.classList.add("faded");
+        }
+      } else if (bounds.top >= 0 && bounds.top + (bounds.height / 2) <= $.screenHeight) {
+        if (delay > 0) {
+          setTimeout(function() {
+            $fader.classList.add("fading");
+          }, delay);
+        } else {
+          $fader.classList.add("fading");
+        }
+      }
+    });
   }
 
   checkFaders();

@@ -1,4 +1,40 @@
 
+// -- Faders
+
+[data-fade-in] {
+  position: relative;
+  opacity: 0;
+  transition: transform .6s, opacity .6s;
+  transform: translateY(@gapXXXL);
+  backface-visibility: hidden;
+
+  &.fading {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &[data-fade-in="rtl"] {
+    transform: translateX(@gapXXXL);
+
+    &.fading {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &.faded {
+    transition: none;
+  }
+}
+
+[data-mask-in] {
+
+}
+
+[data-grow-in] {
+
+}
+
 // -- Masonry group
 
 .group.masonry {
@@ -71,7 +107,7 @@
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 
       .inner {
-        border-radius: @radius;
+        border-radius: @inputRadius;
         padding: @gapHuge @gap;
       }
 
@@ -116,10 +152,17 @@
       transition: opacity .6s;
       backface-visibility: hidden;
 
+      border-radius: @inputRadius;
+      box-shadow: 5px 5px 15px rgba(0,0,0,.2);
+
       &.active {
         opacity: 1;
         z-index: 4;
       }
+    }
+
+    &:first-child {
+      margin-bottom: @gap;
     }
 
     @media (min-width: 768px) {
@@ -127,6 +170,8 @@
       max-height: (@gapGigantic * 2.75);
 
       &:first-child {
+        margin-bottom: 0;
+
         .slide {
           left: @gapS;
         }
@@ -156,8 +201,8 @@
         li {
           display: inline-block;
           margin-right: @gap;
-          height: @fontSizeSmall;
-          width: @fontSizeSmall;
+          height: @fontSizeFormInput;
+          width: @fontSizeFormInput;
           background-color: @mediumColor;
           border-radius: 100%;
           cursor: pointer;
