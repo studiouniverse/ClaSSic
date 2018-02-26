@@ -18,19 +18,19 @@
 <link rel="stylesheet" href="styles/index.css?v=0.8">
 </head>
 <body id="top">
-  <header class="bg-lightest py-0">
+  <header class="bg-dark py-0">
     <div class="layout layout-fluid">
       <div class="group group-center">
         <div class="col-6 col-md-2 py-md-0 mb-0">
-          <h4>Classic</h4>
+          <h4 class="text-light">Classic</h4>
         </div>
         <div class="col-6 hidden-md text-right mb-0 py-md-0" aria-hidden>
-          <a class="btn btn-flat"><span>Browse <i class="fas fa-chevron-down"></i></span></a>
+          <a class="btn btn-flat btn-dark"><span>Browse <i class="fas fa-chevron-down"></i></span></a>
         </div>
         <div class="col-12 hidden block-md col-md-7 mb-0 py-md-0 text-left">
           <nav class="nav-longer nav-md-inline">
             <ul class="menu">
-              <li class="menu-item current-menu-item"><a href="#services" class="text-dark">Overview</a></li>
+              <li class="menu-item current-menu-item"><a href="#services" class="text-medium">Overview</a></li>
               <li class="menu-item"><a href="#products" class="text-medium">Products</a></li>
               <li class="menu-item"><a href="#case-studies" class="text-medium">Case Studies</a></li>
               <li class="menu-item"><a href="#culture" class="text-medium">About Us</a></li>
@@ -38,7 +38,7 @@
           </nav>
         </div>
         <div class="col-12 col-md-3 hidden block-md text-right py-md-0 mb-0">
-          <a class="btn btn-fancy" href=""><span>Buy</span></a>
+          <a class="btn btn-fancy text-light" href=""><span>Buy</span></a>
         </div>
       </div>
     </div>
@@ -46,8 +46,7 @@
 
   <main>
     <section class="billboard bg-anchor-bottom-right bg-size-12 bg-size-md-8" style="background-image:url(images/iphonex.png)">
-      <!-- <div class="overlay bg-lightest opacity-4"></div> -->
-      <div class="layout">
+      <div class="layout text-lightest">
         <h1><strong>Shaken.</strong> Not stirred.</h1>
         <p><strong>Classic</strong> is a friendly CSS library for creating classy websites.</p>
         <h4><a href="" class="text-lightest"><i class="fas fa-chevron-right fa-xs"></i><span>View project.</span></a></h4>
@@ -55,10 +54,21 @@
     </section>
 
     <section class="bg-light mt-0">
-      <div class="layout layout-content">
-        <div class="text-larger text-center align-center" data-fade>
-          <p>Classic has everything you need to get started. It might be opinionated and bloated, but let's face it, that usually makes your life easier.</p>
-          <p>Classic has been built for internal use, so currently ships without any documentation or support.</p>
+      <div class="layout">
+        <div class="group text-larger" data-fade>
+          <div class="col-md-3">
+            <h3>Stay classy.</h3>
+          </div>
+          <div class="col-md-9">
+            <div class="group">
+              <div class="offset-md-1 col-sm-5">
+                <p>Classic has everything you need to get started. It might be opinionated and bloated, but let's face it, that usually makes your life easier.</p>
+              </div>
+              <div class="offset-sm-2 offset-md-1 col-sm-5">
+                <p>Classic has been built for internal use, and so currently ships without documentation or support.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -163,30 +173,30 @@
         <div class="group masonry text-center">
 
           <div class="text-lightest align-center flex group-center" data-fade>
-            <div class="overlay bg-medium"></div>
+            <div class="overlay bg-secondary"></div>
             <div>
-              <p>A masonry panel.</p>
+              <h4>A masonry panel.</h4>
               <p><a href="" class="text-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
             </div>
           </div>
           <div class="text-medium align-center flex group-center" data-fade>
             <div class="overlay bg-dark"></div>
             <div>
-              <p>A masonry panel.</p>
+              <h4>A masonry panel.</h4>
               <p><a href="" class="text-medium"><i class="far fa-arrow-alt-circle-right"></i></a></p>
             </div>
           </div>
           <div class="text-lightest align-center flex group-center" data-fade>
             <div class="overlay bg-medium" style="background-image:url(images/decking.jpg)"></div>
             <div>
-              <p>A masonry panel.</p>
+              <h4>A masonry panel.</h4>
               <p><a href="" class="text-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
             </div>
           </div>
           <div class="text-lightest align-center flex group-center" data-fade>
             <div class="overlay bg-alt"></div>
             <div>
-              <p>A masonry panel.</p>
+              <h4>A masonry panel.</h4>
               <p><a href="" class="text-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
             </div>
           </div>
@@ -231,38 +241,40 @@
     <section class="pt-0">
       <div class="layout layout-content text-center">
         <h3>Making contact.</h3>
-        <p>Make it simple for potential customers to contact you.</p>
+        <p>Always make it simple for customers and clients to contact you.</p>
       </div>
     </section>
 
-    <section class="panel bg-light">
-      <div class="layout">
-        <div class="group group-center text-medium">
-          <div class="col-md-6 pb-0">
-            <h4>Cambridge, UK</h4>
+    <div class="layout">
+      <section class="bg-light">
+        <div class="px-1 px-md-2">
+          <div class="group group-center text-medium">
+            <div class="col-md-6 pb-0">
+              <h4>Cambridge, UK</h4>
+            </div>
+            <div class="col-md-6 text-md-right">
+              <h4><a href="tel:" class="text-medium">+44 (0) 1223 123456</a></h4>
+            </div>
           </div>
-          <div class="col-md-6 text-md-right">
-            <h4><a href="tel:" class="text-medium">+44 (0) 1223 123456</a></h4>
+          <div class="group group-center text-medium">
+            <div class="col-md-6 pb-0">
+              <h4>New York, NY</h4>
+            </div>
+            <div class="col-md-6 text-md-right">
+              <h4><a href="tel:" class="text-medium">+1 (0) 1223 123456</a></h4>
+            </div>
+          </div>
+          <div class="group group-center text-medium">
+            <div class="col-md-6 pb-0">
+              <h4>LA, California</h4>
+            </div>
+            <div class="col-md-6 text-md-right">
+              <h4><a href="tel:" class="text-medium">+1 (0) 1223 123456</a></h4>
+            </div>
           </div>
         </div>
-        <div class="group group-center text-medium">
-          <div class="col-md-6 pb-0">
-            <h4>New York, NY</h4>
-          </div>
-          <div class="col-md-6 text-md-right">
-            <h4><a href="tel:" class="text-medium">+1 (0) 1223 123456</a></h4>
-          </div>
-        </div>
-        <div class="group group-center text-medium">
-          <div class="col-md-6 pb-0">
-            <h4>LA, California</h4>
-          </div>
-          <div class="col-md-6 text-md-right">
-            <h4><a href="tel:" class="text-medium">+1 (0) 1223 123456</a></h4>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <section>
       <div class="layout">
@@ -323,18 +335,12 @@
         </form>
       </div>
     </section>
-
-    <!-- <section class="panel pt-0 bg-transparent">
-      <div class="media">
-        <video playsinline="" autoplay="" muted="" loop="" poster="" class="video_overlay"><source src="" type="video/mp4"></video>
-      </div>
-    </section> -->
   </main>
 
   <footer>
     <div class="layout">
       <div class="group">
-         <div class="col-12 col-md-5 push-md-7 text-center text-larger text-md-regular text-md-right">
+         <div class="col-12 col-md-5 push-md-7 text-center text-larger text-md-right">
           <nav class="nav-inline"><ul>
             <li><a href class="text-twitter"><i class="fab fa-twitter"></i></a></li>
             <li><a href class="text-instagram"><i class="fab fa-instagram"></i></a></li>
@@ -377,10 +383,10 @@
       <hr/>
       <div class="group">
         <div class="col-4 col-md-6">
-          <h4>Classic</h4>
+          <p><small>Classic</small></p>
         </div>
         <div class="col-8 col-md-6 text-right">
-          <p><small>By <strong><a href="http://studiouniverse.co" target="_blank">Studio Universe.</a></strong> Stay classy.</small></p>
+          <p><small>Made by <strong><a href="http://studiouniverse.co" target="_blank">Studio Universe</a></strong>.</small></p>
         </div>
       </div>
     </div>

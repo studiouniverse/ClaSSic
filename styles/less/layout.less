@@ -93,6 +93,33 @@
   margin-bottom: 0;
 }
 
+
+.group .group {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  @media (min-width: 480px) {
+    [class*="col-sm-"] {
+      padding-top: 0;
+      padding-bottom:0 ;
+    }
+  }
+
+  @media (min-width: 768px) {
+    [class*="col-md-"] {
+      padding-top: 0;
+      padding-bottom:0 ;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    [class*="col-lg-"] {
+      padding-top: 0;
+      padding-bottom:0 ;
+    }
+  }
+}
+
 .generate-columns(@_n, @i: 1, @prefix: ~'') when (@i =< @_n) {
   @n: 12;
 
