@@ -22,14 +22,9 @@ nav {
   .nav-list() {
     li {
       display: block;
-      border-top: 2px solid @lightColor;
-
-      &:last-child {
-        border-bottom: 2px solid @lightColor;
-      }
 
       a[href] {
-        padding: @gapXS 0;
+        padding: @gapXS;
         display: block;
 
         &:hover,
@@ -49,6 +44,7 @@ nav {
       border-color: transparent;
 
       &:last-child {
+        border-color: transparent;
         margin-right: 0;
       }
 
@@ -75,14 +71,21 @@ nav {
   ul {
     padding: 0;
     list-style: none;
-
     .nav-list();
   }
 
   &.nav-longer {
     ul {
-      li a[href] {
-        padding: @gap 0;
+      li {
+        border-top: 1px solid @mediumColor;
+
+        &:last-child {
+          border-bottom: 1px solid @mediumColor;
+        }
+
+        a[href] {
+          padding: @gap @gapS;
+        }
       }
     }
   }

@@ -21,7 +21,7 @@
   .sticky@{prefix} {
     position: sticky;
     z-index: 10;
-    top: -1px; // sometimes there's a rendering issue with 0px
+    top: 0px;
     left: 0;
     backface-visibility: hidden;
   }
@@ -210,7 +210,7 @@
 
 // -- Colors
 
-@colors: ~"primary", ~"secondary", ~"alt", ~"lightest", ~"light", ~"medium", ~"darkest", ~"dark", ~"su", ~"important", ~"warning", ~"info", ~"transparent", ~"facebook", ~"twitter", ~"youtube", ~"instagram", ~"spotify";
+@colors: ~"primary", ~"secondary", ~"alt", ~"lightest", ~"light", ~"medium", ~"darkest", ~"dark", ~"su", ~"important", ~"warning", ~"info", ~"transparent", ~"facebook", ~"twitter", ~"youtube", ~"instagram", ~"spotify", ~"linkedin";
 
 .generate-colors(@n, @i: 1) when (@i =< @n) {
   @colorName: extract(@colors, @i);

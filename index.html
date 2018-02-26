@@ -18,16 +18,16 @@
 <link rel="stylesheet" href="styles/index.css?v=0.8">
 </head>
 <body id="top">
-  <header class="bg-dark py-0">
+  <header class="bg-dark py-0 shadow">
     <div class="layout layout-fluid">
       <div class="group group-center py-0">
         <div class="col-6 col-md-2 py-md-0 mb-0">
           <h4 class="text-light">Classic</h4>
         </div>
-        <div class="col-6 hidden-md text-right mb-0 py-md-0" aria-hidden>
-          <a class="btn btn-flat btn-dark"><span>Browse <i class="fas fa-chevron-down"></i></span></a>
+        <div class="col-6 hidden-md text-right py-md-0" aria-hidden>
+          <a class="btn btn-flat btn-dark" data-toggle=".my-collapse-nav" data-toggle-class="hidden"><span>Browse <i class="fas fa-chevron-down"></i></span></a>
         </div>
-        <div class="col-12 hidden block-md col-md-7 mb-0 py-md-0 text-left">
+        <div class="col-12 hidden block-md col-md-7 py-md-0 text-left my-collapse-nav">
           <nav class="nav-longer nav-md-inline">
             <ul class="menu">
               <li class="menu-item current-menu-item"><a href="#services" class="text-medium">Overview</a></li>
@@ -37,8 +37,8 @@
             </ul>
           </nav>
         </div>
-        <div class="col-12 col-md-3 hidden block-md text-right py-md-0 mb-0">
-          <a class="btn btn-fancy text-light" href=""><span>Buy</span></a>
+        <div class="col-12 col-md-3 hidden block-md text-right pb-1 py-md-0 my-collapse-nav">
+          <a class="btn btn-fancy shadow text-light" href=""><span>Buy</span></a>
         </div>
       </div>
     </div>
@@ -144,7 +144,7 @@
                 <p class="tag">Case Study</p>
                 <h4 class="title">Column one</h4>
                 <p>Columns are pretty neat for dividing up for your 'at-a-glance' content, like products and services.</p>
-                <p><a href="" class="btn btn-secondary"><i class="far fa-arrow-alt-circle-right"></i> <span>Read more</span></a></p>
+                <p class="text-right"><a href="" class="btn btn-secondary"><i class="far fa-arrow-alt-circle-right"></i> <span>Read more</span></a></p>
               </article>
             </div>
           </div>
@@ -155,7 +155,7 @@
                 <p class="tag">Case Study</p>
                 <h4 class="title">Column two</h4>
                 <p>Columns are pretty neat for dividing up for your 'at-a-glance' content, like products and services.</p>
-                <p><a href="" class="btn btn-secondary"><i class="far fa-arrow-alt-circle-right"></i> <span>Read more</span></a></p>
+                <p class="text-right"><a href="" class="btn btn-secondary"><i class="far fa-arrow-alt-circle-right"></i> <span>Read more</span></a></p>
               </article>
             </div>
           </div>
@@ -166,7 +166,7 @@
                 <p class="tag">Case Study</p>
                 <h4 class="title">Column three</h4>
                 <p>Columns are pretty neat for dividing up for your 'at-a-glance' content, like products and services.</p>
-                <p><a href="" class="btn btn-secondary"><i class="far fa-arrow-alt-circle-right"></i> <span>Read more</span></a></p>
+                <p class="text-right"><a href="" class="btn btn-secondary"><i class="far fa-arrow-alt-circle-right"></i> <span>Read more</span></a></p>
               </article>
             </div>
           </div>
@@ -182,8 +182,8 @@
     </section>
 
     <section class="bg-light">
-      <div class="layout layout-widescreen">
-        <div class="group masonry text-center">
+      <div class="layout masonry layout-widescreen">
+        <div class="group text-center">
           <div class="text-lightest align-center flex group-center" data-fade-in>
             <div class="overlay card bg-secondary"></div>
             <div>
@@ -218,14 +218,58 @@
 
     <section>
       <div class="layout layout-content text-center">
+        <h3>Editorial.</h3>
+        <p>I've whipped up a special layout for posts and anything else editorial or long-form in nature.</p>
+      </div>
+    </section>
+
+    <section class="bg-info">
+      <div class="editorial">
+        <div class="editorial-article-bg"></div>
+        <div class="editorial-aside-bg"></div>
+        <div class="layout">
+          <div class="group">
+            <div class="col-md-8 article">
+              <article>
+                <p><time datetime="2015-05-16 19:00">May 16</time></p>
+                <h2>What is code?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis libero ac diam mattis, vitae consequat augue suscipit. Aenean efficitur ante convallis ullamcorper scelerisque. Aenean in tincidunt libero. In ac vulputate urna, nec fermentum augue. Nulla est felis, luctus sit amet orci eget, lobortis egestas ligula. Donec varius lobortis eros, sit amet facilisis turpis porta pretium. Aenean ultricies commodo metus vitae scelerisque. Cras et dictum orci. Integer accumsan, libero ut maximus pulvinar, urna libero mollis neque, sit amet hendrerit dui quam quis diam. Morbi scelerisque ornare libero non tempus. Ut convallis dolor id vehicula sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis id scelerisque libero. Nunc maximus finibus dolor ac euismod. Nullam vulputate tortor eu mauris luctus porta.</p>
+                <p>Mauris sit amet libero vel quam sollicitudin semper. Donec quis efficitur enim, non tempus massa. Nulla volutpat ipsum sed massa condimentum, non dictum lorem dictum. Nulla vitae ante urna. Donec porttitor, tellus eget sollicitudin sagittis, turpis ex pharetra justo, et hendrerit neque erat a mauris. Nunc finibus risus ut velit malesuada mattis. Donec felis lectus, egestas luctus diam nec, elementum gravida nibh. Suspendisse nec lorem lacus. Aliquam non lectus felis. Ut risus diam, elementum ac cursus laoreet, viverra ac enim. Sed nunc leo, faucibus quis imperdiet sed, posuere sit amet dui. Donec quis mauris nec magna finibus porta. Mauris faucibus quam viverra massa viverra facilisis. Pellentesque vestibulum, augue a aliquam egestas, tortor velit aliquet elit, condimentum ultrices augue enim eget augue. Proin sapien libero, maximus ut tincidunt sed, facilisis sed ante.</p>
+              </article>
+            </div>
+            <div class="col-md-4 aside">
+              <div class="sticky-md">
+                <div class="group">
+                  <div class="offset-md-1 col-md-11">
+                    <aside>
+                      <h4 class="author">By Alastair</h4>
+                      <hr/>
+                      <p class="mb"><small>Share this</small></p>
+                      <nav class="nav-inline"><ul>
+                        <li><a href class="text-twitter"><i class="fab fa-twitter fa-lg"></i></a></li>
+                        <li><a href class="text-facebook"><i class="fab fa-facebook fa-lg"></i></a></li>
+                        <li><a href class="text-linkedin"><i class="fab fa-linkedin fa-lg"></i></a></li>
+                      </ul></nav>
+                    </aside>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="layout layout-content text-center">
         <h3>Widgets.</h3>
-        <p>In general, carousels should be avoided because they hide content from the viewer, and are slower to navigate than scrolling. However, the tools below offer a decent experience if you really <em>really</em> have to use one.</p>
+        <p>In general, carousels should be avoided because they hide content from the user, and are slower to navigate than scrolling. On the other hand, people will click anything to see more dogs.</p>
       </div>
     </section>
 
     <section class="bg-secondary">
-      <div class="layout layout-widescreen">
-        <div class="group carousel">
+      <div class="layout carousel layout-widescreen">
+        <div class="group">
           <div class="col-12 col-md-6 push-md-6 carousel-images">
             <div class="slide active" style="background-image:url(images/dog1.jpg)"><div class="absolute py-1 px-1 text-lightest"><h4 data-fade-in>Rey</h4></div></div>
             <div class="slide" style="background-image:url(images/dog2.jpg)"><div class="absolute py-1 px-1 text-lightest"><h4 data-fade-in>Finn</h4></div></div>

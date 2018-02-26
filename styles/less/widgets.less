@@ -35,46 +35,141 @@
 
 }
 
-// -- Masonry group
+// -- Editorial
 
-.group.masonry {
-  flex-direction: column;
+.editorial {
+  position: relative;
 
   @media (min-width: 768px) {
-    justify-content: center;
-    align-items: center;
-    height: 120vw;
-    max-height: @maxWidescreenWidth;
-  }
-
-  > div {
-    padding: @gapS;
-    margin-bottom: 0;
-    min-height: 30vh;
-
-    @media (max-width: 767px) {
-      &:nth-child(3n) {
-        order: 4;
-      }
-    }
-
-    @media (min-width: 768px) {
+    .editorial-article-bg {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: @gapS;
+      bottom: (@gapXXXL + @gapS);
+      left: 0%;
       width: 50%;
       height: auto;
-      margin-bottom: 0;
+      background-color: @lightestColor;
+    }
 
-      flex-basis: 42%;
+    .editorial-aside-bg {
+      content: '';
+      position: absolute;
+      top: @gapXXXXL;
+      bottom: @gapS;
+      left: auto;
+      width: 40%;
+      right: 0;
+      height: auto;
+      background-color: @lightColor;
+      border-bottom-left-radius: @inputRadius;
+    }
+  }
 
-      &:nth-child(3n+1) {
-        flex-basis: 58%;
+  .group {
+    .article {
+      z-index: 2;
+      background-color: @lightestColor;
+      box-shadow: 6px 3px 4px rgba(0,0,0,.01);
+      margin: 0 @gapS;
+
+      article {
+        position: relative;
+        z-index: 2;
+        padding: @gap;
+
+        p {
+          line-height: 1.8;
+        }
+      }
+
+      @media (max-width: 767px) {
+        border-top-left-radius: @inputRadius;
+        border-top-right-radius: @inputRadius;
+      }
+
+      @media (min-width: 768px) {
+        margin: 0;
+
+        border-top-right-radius: @inputRadius;
+        border-bottom-right-radius: @inputRadius;
+
+        margin-bottom: @gapXXXL;
+
+        article {
+          padding: @gap @gapL;
+        }
       }
     }
 
-    @media (min-width: 1024px) {
-      flex-basis: 45%;
+    .aside {
+      background-color: @lightColor;
+      margin: 0 @gapS;
 
-      &:nth-child(3n+1) {
-        flex-basis: 55%;
+      aside {
+        padding: @gap;
+      }
+
+      @media (max-width: 767px) {
+        border-bottom-left-radius: @inputRadius;
+        border-bottom-right-radius: @inputRadius;
+      }
+
+      @media (min-width: 768px) {
+        margin: 0;
+        margin-top: @gapXXXL;
+
+        aside {
+          padding: @gap @gapL;
+        }
+      }
+    }
+  }
+}
+
+// -- Masonry group
+
+.masonry {
+  .group {
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      justify-content: center;
+      align-items: center;
+      height: 120vw;
+      max-height: @maxWidescreenWidth;
+    }
+
+    > div {
+      padding: @gapS;
+      margin-bottom: 0;
+      min-height: 30vh;
+
+      @media (max-width: 767px) {
+        &:nth-child(3n) {
+          order: 4;
+        }
+      }
+
+      @media (min-width: 768px) {
+        width: 50%;
+        height: auto;
+        margin-bottom: 0;
+
+        flex-basis: 42%;
+
+        &:nth-child(3n+1) {
+          flex-basis: 58%;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        flex-basis: 45%;
+
+        &:nth-child(3n+1) {
+          flex-basis: 55%;
+        }
       }
     }
   }
@@ -82,7 +177,7 @@
 
 // -- Horizontal layout
 
-.layout.layout-horizontal {
+.layout-horizontal {
   .group {
     cursor: -webkit-grab;
     cursor: grab;
@@ -124,127 +219,129 @@
 
 // -- Carousel
 
-.group.carousel {
-  [class*="col-"] {
-    position: relative;
-    min-height: 48vh;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin: 0;
+.carousel {
+  .group {
+    [class*="col-"] {
+      position: relative;
+      min-height: 48vh;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin: 0;
 
-    .slide {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: @gapS;
-      right: @gapS;
-      width: auto;
-      height: auto;
-      margin: auto;
-      z-index: 2;
+      .slide {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: @gapS;
+        right: @gapS;
+        width: auto;
+        height: auto;
+        margin: auto;
+        z-index: 2;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-      background-color: @lightColor;
-      opacity: 0;
-      transition: opacity .6s;
-      backface-visibility: hidden;
+        background-color: @lightColor;
+        opacity: 0;
+        transition: opacity .6s;
+        backface-visibility: hidden;
 
-      border-radius: @inputRadius;
-      box-shadow: 5px 5px 15px rgba(0,0,0,.2);
+        border-radius: @inputRadius;
+        box-shadow: 5px 5px 15px rgba(0,0,0,.2);
 
-      &.active {
-        opacity: 1;
-        z-index: 4;
+        &.active {
+          opacity: 1;
+          z-index: 4;
+        }
       }
-    }
-
-    &:first-child {
-      margin-bottom: @gap;
-    }
-
-    @media (min-width: 768px) {
-      height: 60vw;
-      max-height: (@gapGigantic * 2.75);
 
       &:first-child {
-        margin-bottom: 0;
+        margin-bottom: @gap;
+      }
 
-        .slide {
-          left: @gapS;
+      @media (min-width: 768px) {
+        height: 60vw;
+        max-height: (@gapGigantic * 2.75);
+
+        &:first-child {
+          margin-bottom: 0;
+
+          .slide {
+            left: @gapS;
+          }
+        }
+
+        &:last-child {
+          .slide {
+            right: @gapS;
+          }
         }
       }
 
-      &:last-child {
-        .slide {
-          right: @gapS;
+      .carousel-controls-dots {
+        position: absolute;
+        bottom: @gap;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 5;
+
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          text-align: center;
+
+          li {
+            display: inline-block;
+            margin-right: @gap;
+            height: @fontSizeFormInput;
+            width: @fontSizeFormInput;
+            background-color: @mediumColor;
+            border-radius: 100%;
+            cursor: pointer;
+
+            transition: border .4s, background .4s;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            &.active {
+              background-color: transparent;
+              border: 2px solid @mediumColor;
+            }
+          }
         }
       }
-    }
 
-    .carousel-controls-dots {
-      position: absolute;
-      bottom: @gap;
-      left: 0;
-      right: 0;
-      margin: auto;
-      z-index: 5;
+      .carousel-arrow-left,
+      .carousel-arrow-right {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: @gapXL;
+        margin: auto;
+        z-index: 5;
 
-      ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
 
-        li {
-          display: inline-block;
-          margin-right: @gap;
-          height: @fontSizeFormInput;
-          width: @fontSizeFormInput;
-          background-color: @mediumColor;
-          border-radius: 100%;
-          cursor: pointer;
-
-          transition: border .4s, background .4s;
-
-          &:last-child {
-            margin-right: 0;
-          }
-
-          &.active {
-            background-color: transparent;
-            border: 2px solid @mediumColor;
-          }
-        }
+        cursor: pointer;
       }
-    }
 
-    .carousel-arrow-left,
-    .carousel-arrow-right {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      height: 100%;
-      width: @gapXL;
-      margin: auto;
-      z-index: 5;
+      .carousel-arrow-left {
+        left: @gap;
+      }
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-
-      cursor: pointer;
-    }
-
-    .carousel-arrow-left {
-      left: @gap;
-    }
-
-    .carousel-arrow-right {
-      right: @gap;
+      .carousel-arrow-right {
+        right: @gap;
+      }
     }
   }
 }

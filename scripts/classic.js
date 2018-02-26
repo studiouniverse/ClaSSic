@@ -1,4 +1,27 @@
 
+// -- Toggle
+
+(function() {
+  $(["[data-toggle]"]).forEach(function($el) {
+    var toggleSelector = $el.attr("data-toggle");
+    var $toggleEl = $([toggleSelector]);
+    var toggleType = $el.attr("data-toggle-class") ? "class" : "none";
+    var toggleData = $el.attr("data-toggle-class");
+
+    $el.on("click", function() {
+      if (toggleType === "class") {
+        if ($el.hasClass("toggled")) {
+          $toggleEl.addClass(toggleData);
+          $el.removeClass("toggled");
+        } else {
+          $toggleEl.removeClass(toggleData);
+          $el.addClass("toggled");
+        }
+      }
+    });
+  });
+})();
+
 // -- Horizontal layout click & drag
 
 (function() {
