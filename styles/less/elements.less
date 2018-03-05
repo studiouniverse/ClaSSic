@@ -31,10 +31,13 @@ blockquote,
 section,
 .slide,
 .slide > div,
-.card {
+.card,
+.post-item {
   max-width: 100%;
+  display: block;
 
   .layout:last-of-type > *:last-child,
+  .layout-content:last-of-type > *:last-child,
   > *:last-child {
     margin-bottom: 0;
   }
@@ -47,6 +50,8 @@ section,
   padding: @gapHuge 0;
 }
 
+figure,
+.attachment,
 .panel,
 .billboard,
 pre,
@@ -54,7 +59,9 @@ pre,
 .slide,
 .masonry div,
 .overlay,
-[class*="col-"] {
+[class*="col-"],
+.card,
+.post-item {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -168,14 +175,14 @@ figure {
   right: 0;
   width: auto;
   height: auto;
-  box-shadow: inset -2px 0 20px -6px rgba(0, 0, 0, 0.17);
-}
+  // box-shadow: inset -2px 0 20px -6px rgba(0, 0, 0, 0.17);
 
-.group .overlay {
-  top: @gapS;
-  bottom: @gapS;
-  left: @gapS;
-  right: @gapS;
+  .overlay-padded {
+    top: @gapS;
+    bottom: @gapS;
+    left: @gapS;
+    right: @gapS;
+  }
 }
 
 .overlay + div {
@@ -185,26 +192,42 @@ figure {
 .card {
   background-color: @lightestColor;
   border-radius: @inputRadius;
-  overflow: hidden;
   box-shadow: 5px 5px 15px rgba(0,0,0,.2);
+}
 
-  figure {
+.card,
+.post-item {
+  position: relative;
+  overflow: hidden;
+
+  &.card-align {
+    height: 100%;
+  }
+
+  &.card-padded {
+    padding: @gapXL;
+  }
+
+  .attachment {
     min-height: @gapGigantic;
     margin-bottom: 0;
   }
 
   article {
-    padding: @gap @gap;
+    position: relative;
+    z-index: 3;
+    padding: @gap;
+  }
 
-    .tag {
-      text-transform: uppercase;
-      letter-spacing: @inputLetterSpacing;
-      font-size: @fontSizeSmaller;
-    }
+  .tag {
+    text-transform: uppercase;
+    letter-spacing: @inputLetterSpacing;
+    font-size: @fontSizeSmaller;
+    margin-bottom: @gapS;
+  }
 
-    .title {
-      text-transform: uppercase;
-    }
+  .title {
+    text-transform: uppercase;
   }
 }
 

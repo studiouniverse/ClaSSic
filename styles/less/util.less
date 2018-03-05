@@ -7,6 +7,10 @@
     display: none;
   }
 
+  .overflow-hidden@{prefix} {
+    overflow: hidden;
+  }
+
   .flex@{prefix} {
     display: flex;
   }
@@ -218,7 +222,7 @@
 
 // -- Colors
 
-@colors: ~"primary", ~"secondary", ~"alt", ~"lightest", ~"light", ~"medium", ~"darkest", ~"dark", ~"su", ~"important", ~"warning", ~"info", ~"transparent", ~"facebook", ~"twitter", ~"youtube", ~"instagram", ~"spotify", ~"linkedin";
+@colors: ~"primary", ~"secondary", ~"alt", ~"lightest", ~"light", ~"lighter", ~"medium", ~"darkest", ~"dark", ~"darker", ~"su", ~"important", ~"warning", ~"info", ~"transparent", ~"facebook", ~"twitter", ~"youtube", ~"instagram", ~"spotify", ~"linkedin";
 
 .generate-colors(@n, @i: 1) when (@i =< @n) {
   @colorName: extract(@colors, @i);
@@ -226,7 +230,7 @@
   @color: @@_color;
 
   .bg-@{colorName} {
-    background-color: @color;
+    background-color: @color !important;
   }
 
   .border-@{colorName} {

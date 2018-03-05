@@ -106,15 +106,8 @@
       var delay = parseInt($fader.attr("data-fade-delay") || 0);
 
       if (bounds.top < 0) {
-        if (delay > 0) {
-          setTimeout(function() {
-            $fader.classList.add("fading");
-            $fader.classList.add("faded");
-          }, delay);
-        } else {
-          $fader.classList.add("fading");
-          $fader.classList.add("faded");
-        }
+        $fader.classList.add("fading");
+        $fader.classList.add("faded");
       } else if (bounds.top >= 0 && bounds.top + (bounds.height / 2) <= $.screenHeight) {
         if (delay > 0) {
           setTimeout(function() {

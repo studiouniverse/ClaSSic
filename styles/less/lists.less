@@ -22,15 +22,14 @@ nav {
   .nav-list() {
     li {
       display: block;
+      transition: border .3s;
 
       a[href] {
-        padding: @gapXS;
+        padding: @gapXS 0;
         display: block;
 
         &:hover,
         &:focus {
-          color: @lightestColor;
-          background-color: @lightColor;
           opacity: 1;
         }
       }
@@ -50,9 +49,13 @@ nav {
 
       a {
         padding: 0;
+      }
 
-        &:hover,
-        &:focus {
+      &:hover,
+      &:focus {
+        border-bottom: 2px solid @primaryColor;
+
+        a {
           background-color: transparent;
         }
       }
@@ -77,10 +80,14 @@ nav {
   &.nav-longer {
     ul {
       li {
-        border-top: 1px solid @mediumColor;
+        border-top: 2px solid @lightColor;
 
         &:last-child {
-          border-bottom: 1px solid @mediumColor;
+          border-bottom: 2px solid @lightColor;
+
+          @media @max-medium-screen {
+            margin-bottom: @gapS;
+          }
         }
 
         a[href] {

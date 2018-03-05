@@ -81,7 +81,9 @@
   width: 100%;
   max-width: 100%;
   min-height: 1px;
-  // margin-bottom: @gapS;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 0 0 100%;
   margin-bottom: 0;
   padding: @gapS @gapS;
 }
@@ -122,7 +124,7 @@
 
   .col-@{prefix}@{i} {
     flex: 0 0 (@i * 100% / @n);
-    width: (@i * 100% / @n);
+    max-width: (@i * 100% / @n);
   }
 
   .offset-@{prefix}@{i} {
