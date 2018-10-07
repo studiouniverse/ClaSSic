@@ -7,14 +7,6 @@
     display: none;
   }
 
-  .overflow-hidden@{prefix} {
-    overflow: hidden;
-  }
-
-  .flex@{prefix} {
-    display: flex;
-  }
-
   .absolute@{prefix} {
     position: absolute;
     z-index: 11;
@@ -55,6 +47,10 @@
   }
 
   .text@{prefix}-smaller {
+    font-size: @fontSizeSmaller;
+  }
+
+  .text@{prefix}-small {
     font-size: @fontSizeSmall;
   }
 
@@ -120,19 +116,15 @@
 
 .generate-utils();
 
-@media (min-width: 480px) {
+@media @small-screen {
   .generate-utils(~'-sm');
-}
-
-@media @max-medium-screen {
-  .generate-utils(~'-md-down');
 }
 
 @media @medium-screen {
   .generate-utils(~'-md');
 }
 
-@media (min-width: 1024px) {
+@media @large-screen {
   .generate-utils(~'-lg');
 }
 
@@ -141,10 +133,6 @@
 .generate-utils-misc(@n, @i: 0, @prefix: ~'') when (@i =< @n) {
   .opacity-@{prefix}@{i} {
     opacity: (@i / @n);
-  }
-
-  .border-radius-@{prefix}@{i} {
-    border-radius: (@i * @gapXL / @n)
   }
 
   .vh-@{prefix}@{i} {
@@ -204,25 +192,24 @@
 
 .generate-utils-misc(12);
 
-@media (min-width: 480px) {
+@media @small-screen {
   .generate-utils-misc(12, 0, ~'sm-');
-}
-
-@media @max-medium-screen {
-  .generate-utils-misc(12, 0, ~'md-down-');
 }
 
 @media @medium-screen {
   .generate-utils-misc(12, 0, ~'md-');
 }
 
-@media (min-width: 1024px) {
+@media @large-screen {
   .generate-utils-misc(12, 0, ~'lg-');
 }
 
 // -- Colors
 
-@colors: ~"primary", ~"secondary", ~"alt", ~"link", ~"lightest", ~"light", ~"lighter", ~"medium", ~"darkest", ~"dark", ~"darker", ~"su", ~"important", ~"warning", ~"info", ~"transparent", ~"facebook", ~"twitter", ~"youtube", ~"instagram", ~"spotify", ~"linkedin";
+@colors: ~"primary", ~"secondary", ~"alt", ~"link", ~"transparent",
+~"lightest", ~"light", ~"lighter", ~"medium", ~"darkest", ~"dark", ~"darker",
+~"important", ~"warning", ~"info",
+~"su", ~"facebook", ~"twitter", ~"youtube", ~"instagram", ~"spotify", ~"linkedin";
 
 .generate-colors(@n, @i: 1) when (@i =< @n) {
   @colorName: extract(@colors, @i);
@@ -241,8 +228,8 @@
     border-left: @gapS solid @color;
   }
 
-  .text-@{colorName},
-  a[href].text-@{colorName} {
+  .color-@{colorName},
+  a[href].color-@{colorName} {
     color: @color !important;
   }
 

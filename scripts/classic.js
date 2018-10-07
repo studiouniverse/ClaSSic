@@ -2,6 +2,9 @@
 // -- Click toggles
 
 (function() {
+
+  var $ = window.___$hermes;
+
   $(["[data-toggle]"]).forEach(function($el) {
     var toggleSelector = $el.attr("data-toggle");
     var $toggleEl = $([toggleSelector]);
@@ -25,6 +28,9 @@
 // -- Horizontal layout click & drag
 
 (function() {
+
+  var $ = window.___$hermes;
+
   $([".layout-horizontal .group"]).forEach(function($el) {
 
     var $horizontalMouseDown = false,
@@ -89,15 +95,12 @@
   });
 })();
 
-// -- Scrolling sub-nav
-
-(function() {
-
-})();
-
 // -- Scroll fade in
 
 (function() {
+
+  var $ = window.___$hermes;
+
   function checkFaders() {
     var $fadeEls = $(["[data-fade-in]:not(.fading)"]);
 
@@ -133,6 +136,9 @@
 // -- Google analytics scroll-in-view
 
 (function() {
+
+  var $ = window.___$hermes;
+
   function checkTrackers() {
     var $trackEls = $(["[data-track-scroll]"]);
 
@@ -165,6 +171,9 @@
 // -- Group carousels
 
 (function() {
+
+  var $ = window.___$hermes;
+
   $([".carousel"]).forEach(function($el) {
 
     var $dots = $el.find([".carousel-controls-dots li"]);

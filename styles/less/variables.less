@@ -1,24 +1,33 @@
 // -- Responsiveness
 
-@handheld-portrait__min-width  : 320px; // 20em;
-@handheld-plus__min-width      : 408px; // 25.5em;
-@handheld-landscape__min-width : 560px; // 35em;
-@tablet-portrait__min-width    : 768px; // 48em;
-@tablet-landscape__min-width   : 1024px; // 64em;
-@desktop-regular__min-width    : 1280px; // 80em;
-@desktop-medium__min-width     : 1600px; // 100em;
-@desktop-large__min-width      : 1920px; // 120em;
-@desktop-xlarge__min-width     : 2240px; // 140em;
-
-@small-screen__min-width       : @handheld-landscape__min-width;
-@medium-screen__min-width      : @tablet-portrait__min-width;
-@large-screen__min-width       : @desktop-regular__min-width;
-@xlarge-screen__min-width      : @desktop-large__min-width;
-
-@small-screen__max-width       : (@small-screen__min-width - 1px);
-@medium-screen__max-width      : (@tablet-portrait__min-width - 1px);
-@large-screen__max-width       : (@desktop-regular__min-width - 1px);
-@xlarge-screen__max-width      : (@desktop-large__min-width - 1px);
+@handheld-portrait__min-width  : 320px;
+@handheld-portrait__max-width  : (@handheld-portrait__min-width - 1px);
+@handheld-x__min-width         : 375px;
+@handheld-x__max-width         : (@handheld-x__min-width - 1px);
+@handheld-plus__min-width      : 414px;
+@handheld-plus__max-width      : (@handheld-plus__min-width - 1px);
+@handheld-landscape__min-width : 560px;
+@handheld-landscape__max-width : (@handheld-landscape__min-width - 1px);
+@tablet-portrait__min-width    : 768px;
+@tablet-portrait__max-width    : (@tablet-portrait__min-width - 1px);
+@tablet-landscape__min-width   : 1024px;
+@tablet-landscape__max-width   : (@tablet-landscape__min-width - 1px);
+@tablet-plus__min-width        : 1024px;
+@tablet-plus__max-width        : (@tablet-landscape__min-width - 1px);
+@desktop-regular__min-width    : 1280px;
+@desktop-regular__max-width    : (@desktop-regular__min-width - 1px);
+@laptop-regular__min-width     : 1366px;
+@laptop-regular__max-width     : (@desktop-regular__min-width - 1px);
+@desktop-medium__min-width     : 1440px;
+@desktop-medium__max-width     : (@desktop-medium__min-width - 1px);
+@desktop-large__min-width      : 1680px;
+@desktop-large__max-width      : (@desktop-large__min-width - 1px);
+@desktop-xlarge__min-width     : 1920px;
+@desktop-xlarge__max-width     : (@desktop-xlarge__min-width - 1px);
+@desktop-qhd__min-width        : 2560px;
+@desktop-qhd__max-width        : (@desktop-xlarge__min-width - 1px);
+@desktop-uhd__min-width        : 3840px;
+@desktop-uhd__max-width        : (@desktop-xlarge__min-width - 1px);
 
 @handheld                      : ~'screen and (min-width: @{handheld-portrait__min-width})';
 @handheld-plus                 : ~'screen and (min-width: @{handheld-plus__min-width})';
@@ -29,6 +38,26 @@
 @desktop-medium                : ~'screen and (min-width: @{desktop-medium__min-width})';
 @desktop-large                 : ~'screen and (min-width: @{desktop-large__min-width})';
 @desktop-xlarge                : ~'screen and (min-width: @{desktop-xlarge__min-width})';
+
+@max-handheld                  : ~'screen and (max-width: @{handheld-portrait__max-width})';
+@max-handheld-plus             : ~'screen and (max-width: @{handheld-plus__max-width})';
+@max-handheld-landscape        : ~'screen and (max-width: @{handheld-landscape__max-width})';
+@max-tablet                    : ~'screen and (max-width: @{tablet-portrait__max-width})';
+@max-tablet-landscape          : ~'screen and (max-width: @{tablet-landscape__max-width})';
+@max-desktop                   : ~'screen and (max-width: @{desktop-regular__max-width})';
+@max-desktop-medium            : ~'screen and (max-width: @{desktop-medium__max-width})';
+@max-desktop-large             : ~'screen and (max-width: @{desktop-large__max-width})';
+@max-desktop-xlarge            : ~'screen and (max-width: @{desktop-xlarge__max-width})';
+
+@small-screen__min-width       : @handheld-landscape__min-width;
+@medium-screen__min-width      : @tablet-portrait__min-width;
+@large-screen__min-width       : @desktop-regular__min-width;
+@xlarge-screen__min-width      : @desktop-large__min-width;
+
+@small-screen__max-width       : @handheld-landscape__max-width;
+@medium-screen__max-width      : @tablet-portrait__max-width;
+@large-screen__max-width       : @desktop-regular__max-width;
+@xlarge-screen__max-width      : @desktop-large__max-width;
 
 @small-screen                  : ~'screen and (min-width: @{small-screen__min-width})';
 @medium-screen                 : ~'screen and (min-width: @{medium-screen__min-width})';
@@ -46,12 +75,6 @@
 @maxSiteWidth: 1100px;
 @maxWidescreenWidth: 1440px;
 @maxFluidWidth: 100%;
-
-// https://material.io/devices/
-@maxTabletPlusWidth: 1023px; // iPad Pro
-@maxTabletWidth: 767px; // iPad & iPad Mini
-@maxHandheldPlusWidth: 413px; // iPhone 8 Plus
-@maxHandheldWidth: 374px; // iPhone X
 
 @inputRadius: 5px;
 @inputBorderColor: rgba(0,0,0,0.1);
@@ -151,5 +174,5 @@
 @youtubeColor       :     rgb(196, 048, 043);
 @vimeoColor         :     rgb(068, 187, 255);
 @spotifyColor       :     rgb(129, 183, 026);
-@suColor            :     rgb(255, 250, 110);
+@suColor            :     rgb(169, 152, 124);
 
