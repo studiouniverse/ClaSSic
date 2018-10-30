@@ -48,6 +48,8 @@
     }).on("mousedown", function(e) {
       clearInterval($horizontalMouseInterval);
 
+      $el.addClass("scrolling");
+
       $horizontalMouseDown = true;
       $horizontalMouseStartScrollX = $el.scrollLeft;
       $horizontalMouseStartX = $horizontalMouseStartScrollX + e.clientX;
@@ -90,6 +92,8 @@
         $horizontalMouseDown = false;
         $horizontalMouseStart = false;
       }
+
+      $el.removeClass("scrolling");
     });
 
   });

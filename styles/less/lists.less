@@ -19,6 +19,11 @@ ol ol {
 }
 
 nav {
+  a[href]:not(.btn):hover,
+  a[href]:not(.btn):focus {
+    text-decoration: none;
+  }
+
   .nav-list() {
     li {
       display: block;
@@ -31,6 +36,7 @@ nav {
         &:hover,
         &:focus {
           opacity: 1;
+
         }
       }
     }

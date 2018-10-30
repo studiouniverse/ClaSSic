@@ -17,6 +17,7 @@ a {
 
 a[href] {
   color: @linkColor;
+  text-decoration-skip-ink: auto;
 
   [class*="fa-"] + span {
     margin-left: @gapS;
@@ -34,8 +35,7 @@ a[href]:active {
 a[href]:not(.btn):hover,
 a[href]:not(.btn):focus {
   opacity: 0.6;
-  // text-decoration: underline;
-  text-decoration-skip-ink: auto;
+  text-decoration: underline;
 }
 
 [tabindex="-1"]:focus {
@@ -151,6 +151,7 @@ button,
 
     &.btn-fancy {
       color: @lightestColor;
+      border-color: @primaryColor;
     }
 
     &.btn-flat {
@@ -229,7 +230,7 @@ input[type="search"],
 input[type="password"],
 input[type="email"],
 textarea {
-
+  appearance: none;
 }
 
 textarea {
