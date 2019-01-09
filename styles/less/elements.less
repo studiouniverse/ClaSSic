@@ -41,7 +41,7 @@ footer,
 section,
 .panel {
   margin: 0;
-  padding: @gapPlus 0;
+  padding: @gapBig 0;
 
   @media @medium-screen {
     padding: @gapBigger 0;
@@ -72,8 +72,14 @@ pre {
 }
 
 .billboard {
+  background-color: @primaryColor;
   margin: 0;
   position: relative;
+  padding: @gapGigantic 0;
+
+  @media @medium-screen {
+    padding: (@gap * 12) 0;
+  }
 
   &.bordered:after {
     content: '';
@@ -92,6 +98,7 @@ pre {
   max-width: @maxWidescreenWidth;
 }
 
+blockquote,
 section .panel,
 pre {
   padding: @gap;
@@ -145,11 +152,6 @@ pre {
   }
 }
 
-blockquote {
-  // background: @lightColor;
-  // padding: @gap;
-}
-
 .card {
   background-color: @lightestColor;
   border-radius: @inputRadius;
@@ -171,6 +173,10 @@ blockquote {
 
   .attachment {
     min-height: @gapGigantic;
+    margin-bottom: 0;
+  }
+
+  figure {
     margin-bottom: 0;
   }
 

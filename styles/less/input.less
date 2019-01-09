@@ -53,9 +53,9 @@ button,
   transition: color .3s, opacity .3s, box-shadow .3s, border .3s, background .3s;
 }
 
-a:not(:hover):not(:focus) {
-  border-color: transparent;
-}
+// a:not(:hover):not(:focus) {
+//   border-color: transparent;
+// }
 
 button,
 [type="submit"] {
@@ -64,34 +64,53 @@ button,
 
 button,
 .btn,
-[href].btn,
 [type="submit"] {
   position: relative;
 
   background: transparent;
-  color: @mediumColor;
-  border: 2px solid @inputBorderColor;
+  color: inherit;
+  border: 1px solid @inputBorderColor;
   border-radius: @inputRadius;
   outline: none;
 
   vertical-align: baseline;
-  display: inline-block;
+  display: block;
+  width: 100%;
   text-align: center;
+  margin-bottom: @gap;
 
   min-width: 64px;
-  padding: (@gapXS) @gap;
+  padding: (@gapXS) @gapL;
   font-size: @fontSizeSmall;
+  font-weight: 500;
   line-height: inherit;
+  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: @inputLetterSpacing;
 
-  @media (min-width: 480px) {
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.04);
+
+  @media @small-screen {
     display: inline-block;
+    width: auto;
     margin-bottom: 0;
   }
 
-  [class*="fa-"] + span {
+  [class*="fa-"] + span,
+  span + [class*="fa-"] {
     margin-left: @gapS;
+  }
+
+  &.btn-primary {
+    color: @lightestColor;
+    background-color: @primaryColor;
+    border-color: darken(@primaryColor, 4);
+  }
+
+  &.btn-secondary {
+    color: @lightestColor;
+    background-color: @secondaryColor;
+    border-color: darken(@secondaryColor, 4);
   }
 
   &.btn-fancy {
@@ -106,7 +125,6 @@ button,
       right: 0;
       width: 100%;
       height: 100%;
-      // border-radius: @inputRadius;
       background-color: @primaryColor;
     }
 
@@ -129,48 +147,22 @@ button,
     }
   }
 
-  &.btn-flat {
-    background-color: @lighterColor;
-    border-color: transparent;
-
-    &.btn-dark {
-      background-color: @darkerColor;
-    }
-  }
-
-  &.btn-primary {
-    color: @lightestColor;
-    background-color: @primaryColor;
-    border-color: darken(@primaryColor, 2);
-  }
-
-  &.btn-secondary {
-    color: @lightestColor;
-    background-color: @secondaryColor;
-    border-color: darken(@secondaryColor, 2);
-  }
-
   &:hover,
   &:focus,
   &:active {
     border-color: @primaryColor;
     color: inherit;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0);
 
     &.btn-fancy {
-      color: @lightestColor;
+      // color: @lightestColor;
       border-color: @primaryColor;
-    }
-
-    &.btn-flat {
-      color: inherit;
-      background-color: transparent;
-      border-color: transparent;
     }
 
     &.btn-primary {
-      color: lighten(@primaryColor, 5);
-      background-color: fade(@lightestColor, 2);
-      border-color: @primaryColor;
+      // color: @lightestColor;
+      background-color: fade(@lightestColor, 5);
+      border-color: @lightestColor;
     }
 
     &.btn-secondary {
@@ -185,7 +177,9 @@ button + button,
 button + .btn,
 .btn + button,
 .btn + .btn {
-  margin-left: @gapS;
+  @media @small-screen {
+    margin-left: @gapS;
+  }
 }
 
 label {

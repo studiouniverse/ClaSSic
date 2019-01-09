@@ -34,10 +34,8 @@ address {
 }
 
 blockquote {
-  font-size: @fontSizeSmall;
-  line-height: @lineHeightSmall;
-
   p {
+    // font-size: @fontSizeLarge;
     font-style: italic;
   }
 }
@@ -90,14 +88,10 @@ h1 {
   }
 }
 
-h1 + p {
-  font-size: (@gap * 1.5);
-}
-
 h2 {
   font-size: (@gap * 2);
   font-weight: 500;
-  font-family: @headerFont;
+  font-family: @titleFont;
 
   @media @large-screen {
     font-size: (@gap * 2.5);
@@ -117,7 +111,7 @@ h3 {
 h4 {
   font-size: @fontSize;
   font-weight: inherit;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 h5 {

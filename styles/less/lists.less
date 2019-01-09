@@ -45,12 +45,12 @@ nav {
     ul li {
       display: inline-block;
       margin-right: @gap;
-      // border-top: 2px solid transparent;
-      // border-bottom: 2px solid transparent;
-      // border-color: transparent;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      border-color: transparent;
 
       &:last-child {
-        // border-color: transparent;
+        border-color: transparent;
         margin-right: 0;
       }
 
@@ -60,7 +60,7 @@ nav {
 
       &:hover,
       &:focus {
-        // border-bottom: 2px solid @primaryColor;
+        border-bottom: 2px solid @secondaryColor;
 
         a {
           background-color: transparent;
@@ -98,7 +98,7 @@ nav {
         }
 
         a[href] {
-          padding: @gap @gapS;
+          padding: (@gap * 0.75) @gapS;
         }
       }
     }
