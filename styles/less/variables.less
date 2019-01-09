@@ -71,46 +71,33 @@
 
 // -- Layout
 
-@maxTextWidth: 820px;
+@maxTextWidth: 850px;
 @maxSiteWidth: 1100px;
-@maxWidescreenWidth: 1440px;
-@maxFluidWidth: 100%;
+@maxWidescreenWidth: 1680px;
+@maxFluidWidth: 100vw;
 
 @inputRadius: 5px;
 @inputBorderColor: rgba(0,0,0,0.1);
 @inputLetterSpacing: 0.2rem;
 
-@gapXS: 0.45rem;
-@gapS: 0.9rem;
+@gapXS: (@gap * 0.25);
+@gapS: (@gap * 0.5);
 @gap: 1.8rem;
-@gapL: 2.7rem;
-@gapXL: 3.6rem;
-@gapXXL: 4.5rem;
-@gapXXXL: 5.4rem;
-@gapXXXXL: 6.3rem;
-@gapXXXXXL: 7.2rem;
-@gapXXXXXXL: 8.1rem;
-@gapXXXXXXXL: 9rem;
-@gapXXXXXXXXL: 9.9rem;
+@gapL: (@gap * 1.5);
+@gapXL: (@gap * 2);
+@gapXXL: (@gap * 2.5);
+@gapXXXL: (@gap * 3);
+@gapXXXXL: (@gap * 3.5);
+@gapXXXXXL: (@gap * 4);
 
-@gapMedium: @gapXL;
-@gapLarge: @gapXXXL;
-@gapExtraLarge: @gapXXXXXXXL;
-@gapHuge: (@gap * 6);
-@gapGigantic: (@gap * 12);
+@gapPlus: (@gap * 1.25);
+@gapBig: (@gap * 2);
+@gapBigger: (@gap * 4);
+@gapReallyBig: (@gap * 6);
+@gapHuge: (@gap * 8);
+@gapGigantic: (@gap * 10);
 
 // -- Typography
-
-@fontWeight: 400;
-@fontWeightThin: 300;
-@fontSize: @gap;
-@fontSizeFormInput: 16px; // 1.6rem
-@fontSizeSmaller: 1rem;
-@fontSizeSmall: 1.4rem;
-@fontSizeLarge: 2.2rem;
-
-@lineHeight: 1.6;
-@lineHeightTitle: 1.2;
 
 @baseFont: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 @bodyFont: @baseFont;
@@ -118,17 +105,31 @@
 @titleFont: @baseFont;
 @monoFont: monospace;
 
+@fontWeight: 400;
+@fontWeightThin: 300;
+@fontSize: @gap;
+@fontSizeFormInput: 16px; // 1.6rem
+@fontSizeSmaller: @gapS;
+@fontSizeSmall: (@gap * 0.75);
+@fontSizeLarge: (@gap * 1.25);
+
+@letterSpacing: -.022em;
+
+@lineHeight: (@gap * 2);
+@lineHeightSmall: (@gap * 1.8);
+@lineHeightTitle: (@gap * 3.5);
+
 // -- Colours
 
 @blue               :     #007bff;
 @indigo             :     #6610f2;
-@purple             :     #6f42c1;
+@purple             :     #36356f;
 @pink               :     #fbd1cc;
 @red                :     #dc3545;
 @rose               :     #ff6161;
 @orange             :     #fd7e14;
 @yellow             :     #ffe100;
-@gold               :     #ffbf02;
+@gold               :     rgb(169, 152, 124);
 @green              :     #28a745;
 @teal               :     #20c997;
 @lime               :     #c9f78b;
@@ -139,12 +140,12 @@
 @shell              :     #f3f1ee;
 @grey               :     #666;
 @onyx               :     #353839;
-@slate              :     #111;
+@slate              :     #1d1e1f;
 @black              :     #000000;
 
 @backgroundColor: @lightestColor;
-@primaryColor: @blue;
-@secondaryColor: #36356f;
+@primaryColor: @purple;
+@secondaryColor: @blue;
 @altColor: darken(@primaryColor, 20);
 
 @transparentColor: transparent;
@@ -176,5 +177,4 @@
 @youtubeColor       :     rgb(196, 048, 043);
 @vimeoColor         :     rgb(068, 187, 255);
 @spotifyColor       :     rgb(129, 183, 026);
-@suColor            :     rgb(169, 152, 124);
-
+@suColor            :     @yellow;

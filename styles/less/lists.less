@@ -30,13 +30,12 @@ nav {
       transition: border .3s;
 
       a[href] {
-        padding: @gapXS 0;
+        padding: 0;
         display: block;
 
         &:hover,
         &:focus {
           opacity: 1;
-
         }
       }
     }
@@ -46,11 +45,12 @@ nav {
     ul li {
       display: inline-block;
       margin-right: @gap;
-      border-bottom: 2px solid;
-      border-color: transparent;
+      // border-top: 2px solid transparent;
+      // border-bottom: 2px solid transparent;
+      // border-color: transparent;
 
       &:last-child {
-        border-color: transparent;
+        // border-color: transparent;
         margin-right: 0;
       }
 
@@ -60,7 +60,7 @@ nav {
 
       &:hover,
       &:focus {
-        border-bottom: 2px solid @primaryColor;
+        // border-bottom: 2px solid @primaryColor;
 
         a {
           background-color: transparent;
@@ -69,7 +69,7 @@ nav {
 
       &.current,
       &.current-menu-item {
-        border-bottom: 2px solid @primaryColor;
+        // border-bottom: 2px solid @primaryColor;
 
         a {
           opacity: 0.5;

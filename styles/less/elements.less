@@ -1,10 +1,6 @@
 header {
-  padding: @gap 0;
+  padding: 0;
   margin: 0;
-}
-
-footer {
-  padding: @gap 0;
 }
 
 figure,
@@ -41,11 +37,15 @@ section,
   }
 }
 
+footer,
 section,
-.billboard,
 .panel {
   margin: 0;
-  padding: @gapHuge 0;
+  padding: @gapPlus 0;
+
+  @media @medium-screen {
+    padding: @gapBigger 0;
+  }
 }
 
 section,
@@ -72,16 +72,8 @@ pre {
 }
 
 .billboard {
+  margin: 0;
   position: relative;
-  color: @lightestColor;
-  background-color: @secondaryColor;
-  padding: (@gapGigantic + @gapXL) 0;
-  box-shadow: inset -2px 0 20px -6px rgba(0, 0, 0, 0.17);
-  margin-bottom: @gap;
-
-  @media @max-medium-screen {
-    padding: (@gapGigantic) 0;
-  }
 
   &.bordered:after {
     content: '';
@@ -154,8 +146,8 @@ pre {
 }
 
 blockquote {
-  background: @lightColor;
-  padding: @gap;
+  // background: @lightColor;
+  // padding: @gap;
 }
 
 .card {
@@ -209,7 +201,6 @@ blockquote {
   right: 0;
   width: auto;
   height: auto;
-  // box-shadow: inset -2px 0 20px -6px rgba(0, 0, 0, 0.17);
 
   &.overlay-padded {
     top: @gapS;

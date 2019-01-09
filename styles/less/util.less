@@ -1,10 +1,10 @@
 .generate-utils(@prefix: ~'') {
   .block@{prefix} {
-    display: block;
+    display: block !important;
   }
 
   .hidden@{prefix} {
-    display: none;
+    display: none !important;
   }
 
   .absolute@{prefix} {
@@ -153,6 +153,10 @@
 
   .pb-@{prefix}@{i} {
     padding-bottom: (@gap * @i);
+  }
+
+  .pl-@{prefix}@{i} {
+    padding-left: (@gap * @i);
   }
 
   .pr-@{prefix}@{i} {

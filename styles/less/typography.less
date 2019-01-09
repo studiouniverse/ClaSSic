@@ -1,12 +1,13 @@
 html {
   font-size: 10px;
   font-synthesis: none;
-  // -moz-font-feature-settings: 'kern';
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: 'kern';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   // text-rendering: optimizelegibility;
   direction: ltr;
   text-align: left;
+  quotes: "“" "”";
 }
 
 @media @max-medium-screen {
@@ -21,11 +22,8 @@ body {
   font-style: normal;
   font-weight: @fontWeight;
   font-family: @bodyFont;
+  letter-spacing: @letterSpacing;
   color: @textColor;
-}
-
-footer {
-  color: @mediumColor;
 }
 
 p,
@@ -36,7 +34,12 @@ address {
 }
 
 blockquote {
-  font-style: italic;
+  font-size: @fontSizeSmall;
+  line-height: @lineHeightSmall;
+
+  p {
+    font-style: italic;
+  }
 }
 
 address {
@@ -53,12 +56,6 @@ small {
   font-size: @fontSizeSmall;
 }
 
-@media (max-width: 479px) {
-  .mobile-small {
-    font-size: @fontSizeSmall;
-  }
-}
-
 h1,
 h2 {
   margin-top: 0;
@@ -73,44 +70,60 @@ h5 {
 }
 
 h1,
+h2 {
+  line-height: @lineHeightTitle;
+}
+
+h1,
 h2,
 h3 {
-  line-height: @lineHeightTitle;
   letter-spacing: .5px;
 }
 
 h1 {
-  font-size: @gapXXXXL;
+  font-size: (@gap * 2.25);
   font-weight: 500;
   font-family: @titleFont;
-  // color: @titleColor;
+
+  @media @large-screen {
+    font-size: (@gap * 3.5);
+  }
 }
 
 h1 + p {
-  font-size: @fontSizeLarge;
+  font-size: (@gap * 1.5);
 }
 
 h2 {
-  font-size: @gapXXL;
+  font-size: (@gap * 2);
   font-weight: 500;
   font-family: @headerFont;
+
+  @media @large-screen {
+    font-size: (@gap * 2.5);
+  }
 }
 
 h3 {
-  font-size: @gapXL;
-  font-weight: 400;
+  font-size: (@gap * 1.5);
+  font-weight: inherit;
   font-family: @headerFont;
+
+  @media @large-screen {
+    font-size: (@gap * 2);
+  }
 }
 
 h4 {
-  font-size: @fontSizeLarge;
-  font-weight: 400;
+  font-size: @fontSize;
+  font-weight: inherit;
+  text-transform: uppercase;
 }
 
 h5 {
-  font-size: @fontSize;
-  font-weight: 400;
-  text-transform: uppercase;
+  font-family: @titleFont;
+  font-size: @fontSizeLarge;
+  font-weight: inherit;
 }
 
 
