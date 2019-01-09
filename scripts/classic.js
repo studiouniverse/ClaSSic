@@ -131,6 +131,7 @@
 
   $.addUpdate({
     updateOnScroll: true,
+    interval: 100,
     draw: function() {
       checkFaders();
     }
@@ -165,6 +166,7 @@
 
     $.addUpdate({
       updateOnScroll: true,
+      interval: 100,
       draw: function() {
         checkTrackers();
       }
@@ -229,5 +231,66 @@
       $dots[i].addClass("active");
     }
 
+  });
+})();
+
+// -- Lazy loading
+
+(function() {
+
+  var $ = window.___$hermes;
+
+  var $imgs = $(["img[data-src]"]);
+  if (!$imgs || $imgs.length === 0) {
+    return;
+  }
+
+  var loadQueue = [];
+
+  function checkQueue() {
+    if (loadQueue && loadQueue.length > 0) {
+      var $img = loadQueue.pop();
+      var src = $img.attr("data-src");
+
+      if (src && src !== "") {
+        $img.src = src;
+        $img.onload = function() { $img.attr("!data-src"); }
+      } else {
+        checkQueue();
+      }
+    }
+  }
+
+  function checkFigures() {
+    $imgs = $(["img[data-src]"]);
+
+    $imgs.forEach(function($img) {
+      var bounds = $img.getBounds();
+      var src = $img.attr("data-src");
+
+      if (bounds.top < 0 && bounds.top >= -($.screenHeight * 3)) {
+        loadQueue.push($img);
+      } else if (bounds.top >= 0 && bounds.top <= $.screenHeight) {
+        $img.src = src;
+        $img.onload = function() { $img.attr("!data-src"); }
+      } else if (bounds.top >= 0 && bounds.top + (bounds.height / 2) <= $.screenHeight) {
+        loadQueue.push($img);
+      }
+    });
+  }
+
+  $.addUpdate({
+    updateOnScroll: true,
+    interval: 100,
+    draw: function() {
+      checkFigures();
+    }
+  });
+
+  $.addUpdate({
+    interval: 200,
+    draw: function() {
+      checkQueue();
+    }
   });
 })();
