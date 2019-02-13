@@ -84,13 +84,13 @@ nav {
     .nav-list();
   }
 
-  &.nav-longer {
+  .nav-longer() {
     ul {
       li {
-        border-top: 2px solid @lightColor;
+        border-top: 1px solid fade(@lightColor, 10);
 
         &:last-child {
-          border-bottom: 2px solid @lightColor;
+          border-bottom: 1px solid fade(@lightColor, 10);
 
           @media @max-medium-screen {
             margin-bottom: @gapS;
@@ -111,6 +111,16 @@ nav {
   &.nav-md-inline {
     @media @medium-screen {
       .nav-inline();
+    }
+  }
+
+  &.nav-longer {
+    .nav-longer();
+  }
+
+  &.nav-max-md-longer {
+    @media @max-medium-screen {
+      .nav-longer();
     }
   }
 }

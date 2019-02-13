@@ -28,17 +28,17 @@
 <link rel="stylesheet" href="styles/index.css?v=815">
 </head>
 <body id="top">
-  <header class="bg-dark shadow sticky-md">
+  <header class="bg-dark color-lightest shadow sticky-md">
     <div class="layout layout-fluid">
       <div class="group group-center py-0">
         <div class="col-6 col-md-2 py-md-0 mb-0">
           <h4 class="color-light">Classic</h4>
         </div>
         <div class="col-6 hidden-md text-right py-md-0" aria-hidden>
-          <a class="btn btn-flat btn-dark" data-toggle=".my-collapse-nav" data-toggle-class="hidden"><span>Browse <i class="fas fa-chevron-down"></i></span></a>
+          <a class="btn btn-alt" data-toggle=".my-collapse-nav" data-toggle-class="hidden"><span>Browse <i class="fas fa-chevron-down"></i></span></a>
         </div>
         <div class="col-12 hidden block-md col-md-7 py-md-0 text-left my-collapse-nav color-light">
-          <nav class="nav-longer nav-md-inline">
+          <nav class="nav-max-md-longer nav-md-inline">
             <ul class="menu">
               <li class="menu-item current-menu-item"><a href="#services">Overview</a></li>
               <li class="menu-item"><a href="#products">Products</a></li>
@@ -55,7 +55,8 @@
   </header>
 
   <main>
-    <section class="billboard bordered bg-anchor-bottom-right bg-size-12 bg-size-md-8" style="background-image:url(images/iphonex.png)">
+    <section class="billboard bordered">
+      <div class="overlay bg-anchor-bottom-right bg-size-12 bg-size-md-8" style="background-image:url(images/iphonex.png)"></div>
       <div class="layout color-lightest">
         <h1><strong>Shaken.</strong> Not stirred.</h1>
         <p class="text-larger"><strong>Classic</strong> is a friendly CSS library for creating classy websites.</p>
@@ -198,28 +199,28 @@
             <div class="overlay overlay-padded card bg-secondary"></div>
             <div>
               <h3>Panel</h3>
-              <p><a href="" class="color-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+              <p><a href=""><i class="far fa-arrow-alt-circle-right"></i></a></p>
             </div>
           </div>
-          <div class="color-medium align-center flex group-center" data-fade-in>
+          <div class="color-lightest align-center flex group-center" data-fade-in>
             <div class="overlay overlay-padded card bg-dark"></div>
             <div>
               <h3>Panel</h3>
-              <p><a href="" class="color-medium"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+              <p><a href=""><i class="far fa-arrow-alt-circle-right"></i></a></p>
             </div>
           </div>
           <div class="color-lightest align-center flex group-center" data-fade-in>
             <div class="overlay overlay-padded card bg-medium" style="background-image:url(images/decking.jpg)"></div>
             <div>
               <h3>Panel</h3>
-              <p><a href="" class="color-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+              <p><a href=""><i class="far fa-arrow-alt-circle-right"></i></a></p>
             </div>
           </div>
           <div class="color-lightest align-center flex group-center" data-fade-in>
             <div class="overlay overlay-padded card bg-alt"></div>
             <div>
               <h3>Panel</h3>
-              <p><a href="" class="color-lightest"><i class="far fa-arrow-alt-circle-right"></i></a></p>
+              <p><a href=""><i class="far fa-arrow-alt-circle-right"></i></a></p>
             </div>
           </div>
         </div>
@@ -310,7 +311,7 @@
     </section>
 
     <section class="bg-light">
-      <div class="layout">
+      <div class="layout layout-content">
         <div class="card bg-lightest">
           <div class="px-2">
             <div class="group group-center">
@@ -343,60 +344,47 @@
     </section>
 
     <section>
-      <div class="layout">
+      <div class="layout layout-content">
         <h3>Send a Message</h3>
         <form>
-          <div class="group">
-            <label class="col-md-6">
-              <span class="label">
-                <span>Name</span>
-                <small>Required</small>
-              </span>
-              <input type="text" name="name" required="" autocomplete="name full-name">
-            </label>
+          <label>
+            <span class="label">
+              <span>Name</span>
+              <small>Required</small>
+            </span>
+            <input type="text" name="name" required="" autocomplete="name full-name">
+          </label>
 
-            <label class="col-md-6">
-              <span class="label">
-                <span>Email</span>
-                <small>Required</small>
-              </span>
-              <input type="email" name="email" required="required" autocomplete="email email-address">
-            </label>
+          <label>
+            <span class="label">
+              <span>Email</span>
+              <small>Required</small>
+            </span>
+            <input type="email" name="email" required="required" autocomplete="email email-address">
+          </label>
 
-            <label class="col-md-6">
-              <span class="label">Subject</span>
-              <select name="subject">
-                <option value="Friendly Chat">Friendly Chat</option>
-                <option value="Angry Chat">Angry Chat</option>
-                <option value="Other">Other</option>
-              </select>
-            </label>
+          <label>
+            <span class="label">Subject</span>
+            <select name="subject">
+              <option value="Friendly Chat">I'm Happy!</option>
+              <option value="Angry Chat">I'm Angry!</option>
+              <option value="Other">I'm Stuck!</option>
+            </select>
+          </label>
 
-            <label class="col-md-6">
-              <span class="label">Service</span>
-              <select name="service">
-                <option value="outbound">Traditional Marketing</option>
-                <option value="inbound">Inbound Marketing</option>
-                <option value="any">All of the above</option>
-              </select>
-            </label>
+          <label>
+            <span class="label">
+              <span>Message</span>
+              <small>Required</small>
+            </span>
+            <textarea name="message" required=""></textarea>
+          </label>
 
-            <label class="col-md-6">
-              <span class="label">
-                <span>Message</span>
-                <small>Required</small>
-              </span>
-              <textarea name="message" required=""></textarea>
-            </label>
+          <label>
+            <span>Sign up to our newsletter <input type="checkbox" name="newsletter" ></span>
+          </label>
 
-            <label class="col-12">
-              <span>Sign up to our newsletter <input type="checkbox" name="newsletter" ></span>
-            </label>
-          </div>
-
-          <div>
-            <button type="submit" class="btn-primary">Send</button>
-          </div>
+          <button type="submit" class="btn-primary">Send</button>
         </form>
       </div>
     </section>
@@ -456,8 +444,7 @@
     </div>
   </footer>
 
-  <script src="scripts/hermes.js"></script>
-  <script src="scripts/classic.js"></script>
+  <script src="scripts/classic-min.js"></script>
 
   <script defer src="scripts/fa/fontawesome.min.js"></script>
   <script defer src="scripts/fa/all.min.js"></script>

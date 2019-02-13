@@ -56,6 +56,7 @@
 
   .text@{prefix}-small {
     font-size: @fontSizeSmall;
+    line-height: @lineHeightSmall;
   }
 
   .text@{prefix}-regular {
@@ -82,17 +83,17 @@
     text-align: center;
   }
 
-  .align@{prefix}-left * {
+  .align@{prefix}-left > * {
     margin-left: 0;
     margin-right: auto;
   }
 
-  .align@{prefix}-center * {
+  .align@{prefix}-center > * {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .align@{prefix}-right * {
+  .align@{prefix}-right > * {
     margin-left: auto;
     margin-right: 0;
   }

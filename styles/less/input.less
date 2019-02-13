@@ -53,10 +53,6 @@ button,
   transition: color .3s, opacity .3s, box-shadow .3s, border .3s, background .3s;
 }
 
-// a:not(:hover):not(:focus) {
-//   border-color: transparent;
-// }
-
 button,
 [type="submit"] {
   appearance: none;
@@ -67,7 +63,7 @@ button,
 [type="submit"] {
   position: relative;
 
-  background: transparent;
+  background: @inputColor;
   color: inherit;
   border: 1px solid @inputBorderColor;
   border-radius: @inputRadius;
@@ -82,7 +78,7 @@ button,
   min-width: 64px;
   padding: (@gapXS) @gapL;
   font-size: @fontSizeSmall;
-  font-weight: 500;
+  font-weight: inherit;
   line-height: inherit;
   text-decoration: none;
   text-transform: uppercase;
@@ -113,38 +109,10 @@ button,
     border-color: darken(@secondaryColor, 4);
   }
 
-  &.btn-fancy {
-    &:before {
-      content: '';
-      display: block;
-      transform-origin: center bottom;
-      transform: scale3d(1, 0, 1);
-      transition: transform .25s ease;
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background-color: @primaryColor;
-    }
-
-    &:hover:before {
-      transform: scale3d(1, 1, 1);
-    }
-
-    span {
-      position: relative;
-    }
-
-    @media(max-width: 767px) {
-      color: @lightestColor;
-      border-color: @primaryColor;
-
-      &:before {
-        right: 0;
-        transform: scale3d(1, 1, 1);
-      }
-    }
+  &.btn-alt {
+    color: @lightestColor;
+    background-color: @altColor;
+    border-color: darken(@altColor, 4);
   }
 
   &:hover,
@@ -154,21 +122,19 @@ button,
     color: inherit;
     box-shadow: 3px 3px 3px rgba(0,0,0,0);
 
-    &.btn-fancy {
-      // color: @lightestColor;
+    &.btn-primary {
+      background-color: fade(@primaryColor, 5);
       border-color: @primaryColor;
     }
 
-    &.btn-primary {
-      // color: @lightestColor;
-      background-color: fade(@lightestColor, 5);
-      border-color: @lightestColor;
+    &.btn-secondary {
+      background-color: fade(@secondaryColor, 5);
+      border-color: @secondaryColor;
     }
 
-    &.btn-secondary {
-      // color: lighten(@secondaryColor, 5);
-      background-color: fade(@lightestColor, 2);
-      border-color: @secondaryColor;
+    &.btn-alt {
+      background-color: fade(@altColor, 5);
+      border-color: @altColor;
     }
   }
 }
@@ -184,12 +150,12 @@ button + .btn,
 
 label {
   display: block;
+  margin-bottom: @gap;
 }
 
 label .label {
   display: block;
-  margin-bottom: @gapS;
-  // text-transform: uppercase;
+  margin-bottom: @gapXS;
   letter-spacing: .5px;
   font-weight: 400;
 
@@ -336,15 +302,15 @@ output {
   display: inline-block;
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+::-webkit-input-placeholder {
   color: fade(@primaryColor, 33);
 }
-::-moz-placeholder { /* Firefox 19+ */
+::-moz-placeholder {
   color: fade(@primaryColor, 33);
 }
-:-ms-input-placeholder { /* IE 10+ */
+:-ms-input-placeholder {
   color: fade(@primaryColor, 33);
 }
-:-moz-placeholder { /* Firefox 18- */
+:-moz-placeholder {
   color: fade(@primaryColor, 33);
 }
