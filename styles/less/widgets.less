@@ -4,11 +4,11 @@
 [data-fade-in] {
   position: relative;
   opacity: 0;
-  transition: transform .6s, opacity .6s;
   transform: translateY(@gapXXXL);
   backface-visibility: hidden;
 
   &.fading {
+    transition: transform .8s, opacity .8s;
     opacity: 1;
     transform: translateY(0);
   }
