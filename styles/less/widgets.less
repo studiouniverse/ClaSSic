@@ -27,14 +27,6 @@
   }
 }
 
-[data-mask-in] {
-
-}
-
-[data-grow-in] {
-
-}
-
 // -- Editorial
 
 .editorial {
@@ -226,128 +218,130 @@
 // -- Carousel
 
 .carousel {
-  .group {
-    [class*="col-"] {
-      position: relative;
-      min-height: 48vh;
-      padding-top: 0;
-      padding-bottom: 0;
-      margin: 0;
+  .slides {
+    position: relative;
+    height: 48vh;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
 
-      .slide {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: @gapS;
-        right: @gapS;
-        width: auto;
-        height: auto;
-        margin: auto;
-        z-index: 2;
+    .slide {
+      position: absolute;
+      z-index: 2;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
 
-        background-color: @lightColor;
-        opacity: 0;
-        transition: opacity .6s;
-        backface-visibility: hidden;
+      width: auto;
+      height: auto;
+      margin: auto;
 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      opacity: 0;
+      transition: opacity .6s;
+      backface-visibility: hidden;
+
+      &.shadow {
         border-radius: @inputRadius;
         box-shadow: 5px 5px 15px rgba(0,0,0,.2);
-
-        &.active {
-          opacity: 1;
-          z-index: 4;
-        }
       }
 
-      &:first-child {
-        margin-bottom: @gap;
-      }
-
-      @media @medium-screen {
-        height: 60vw;
-        max-height: (@gapGigantic * 2.75);
-
-        &:first-child {
-          margin-bottom: 0;
-
-          .slide {
-            left: @gapS;
-          }
-        }
-
-        &:last-child {
-          .slide {
-            right: @gapS;
-          }
-        }
-      }
-
-      .carousel-controls-dots {
-        position: absolute;
-        bottom: @gap;
-        left: 0;
-        right: 0;
-        margin: auto;
-        z-index: 5;
-
-        ul {
-          margin: 0;
-          padding: 0;
-          list-style: none;
-          text-align: center;
-
-          li {
-            display: inline-block;
-            margin-right: @gap;
-            height: @fontSizeFormInput;
-            width: @fontSizeFormInput;
-            background-color: @mediumColor;
-            border-radius: 100%;
-            cursor: pointer;
-
-            transition: border .4s, background .4s;
-
-            &:last-child {
-              margin-right: 0;
-            }
-
-            &.active {
-              background-color: transparent;
-              border: 2px solid @mediumColor;
-            }
-          }
-        }
-      }
-
-      .carousel-arrow-left,
-      .carousel-arrow-right {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        height: 100%;
-        width: @gapXL;
-        margin: auto;
-        z-index: 5;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-
-        cursor: pointer;
-      }
-
-      .carousel-arrow-left {
-        left: @gap;
-      }
-
-      .carousel-arrow-right {
-        right: @gap;
+      &.active {
+        opacity: 1;
+        z-index: 4;
       }
     }
+
+    &.slides-left {
+      margin-bottom: @gap;
+    }
+
+    @media @medium-screen {
+      height: 60vw;
+      max-height: (@gapGigantic * 2.75);
+
+      &.slides-right {
+        margin-bottom: 0;
+
+        .slide {
+          left: @gapS;
+        }
+      }
+
+      &.slides-left {
+        .slide {
+          right: @gapS;
+        }
+      }
+    }
+  }
+
+  .carousel-controls-dots {
+    position: absolute;
+    bottom: @gap;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 5;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+
+      li {
+        display: inline-block;
+        margin-right: @gap;
+        height: @gapS;
+        width: @gapS;
+        background-color: currentColor;
+        border: 2px solid transparent;
+        box-shadow: 1px 1px 3px rgba(0,0,0,0.01);
+        cursor: pointer;
+
+        transition: border .6s, background .6s;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.active {
+          background-color: transparent;
+          border: 2px solid currentColor;
+        }
+      }
+    }
+  }
+
+  .carousel-arrow-left,
+  .carousel-arrow-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: @gapXL;
+    margin: auto;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    cursor: pointer;
+  }
+
+  .carousel-arrow-left {
+    left: @gapS;
+  }
+
+  .carousel-arrow-right {
+    right: @gapS;
   }
 }

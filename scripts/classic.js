@@ -195,7 +195,7 @@
     }
 
     var currentSlide = 0;
-    var numSlides = $dots.length;
+    var numSlides = $dots.length || $slidesLeft.length;
 
     $dots.forEach(function($dot, i) {
       $dot.on("click", function() {
