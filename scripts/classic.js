@@ -256,6 +256,43 @@
   });
 })();
 
+// -- Carousel slide resizing
+
+(function() {
+
+  var $ = window.___$hermes;
+
+  var $carousels = $([".carousel[data-resize='true']"]);
+
+  function resizeSlides() {
+    $carousels.forEach(function($holder) {
+      var minHeight = 0;
+
+      $holder.find([".slide > div"]).forEach(function($el) {
+        var height = $el.getBounds().height;
+        if (height > minHeight) {
+          minHeight = height;
+        }
+      });
+
+      if (minHeight) {
+        $holder.find(".slides").style.height = (minHeight * 1.4) + "px";
+      }
+    });
+  }
+
+  resizeSlides();
+
+  $.addUpdate({
+    interval: 250,
+    updateOnResize: true,
+    draw: function() {
+      resizeSlides();
+    }
+  });
+
+})();
+
 // -- Lazy loading
 
 (function() {

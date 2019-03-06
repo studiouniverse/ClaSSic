@@ -87,10 +87,10 @@ nav {
   .nav-longer() {
     ul {
       li {
-        border-top: 1px solid fade(@lightColor, 10);
+        border-top: 1px solid fade(@textColor, 10);
 
         &:last-child {
-          border-bottom: 1px solid fade(@lightColor, 10);
+          border-bottom: 1px solid fade(@textColor, 10);
 
           @media @max-medium-screen {
             margin-bottom: @gapS;
@@ -98,7 +98,7 @@ nav {
         }
 
         a[href] {
-          padding: (@gap * 0.75) @gapS;
+          padding: (@gap * 0.75) 0;
         }
       }
     }
