@@ -190,7 +190,7 @@
     var $slidesLeft = $el.find([".slides-left .slide"]);
     var $slidesRight = $el.find([".slides-right .slide"]);
 
-    if (!$slidesLeft || $slidesLeft.length == 0) {
+    if (!$slidesLeft || $slidesLeft.length === 0) {
       $slidesLeft = $el.find([".slides .slide"]);
     }
 
@@ -237,9 +237,17 @@
 
       $el.find([".slide.active", "li.active"]).removeClass("active");
 
-      if ($slidesLeft[i]) $slidesLeft[i].addClass("active");
-      if ($slidesRight[i]) $slidesRight[i].addClass("active");
-      if ($dots[i]) $dots[i].addClass("active");
+      if ($slidesLeft[i]) {
+        $slidesLeft[i].addClass("active");
+      }
+
+      if ($slidesRight[i]) {
+        $slidesRight[i].addClass("active");
+      }
+
+      if ($dots[i]) {
+        $dots[i].addClass("active");
+      }
     }
 
     if (autoplay) {
@@ -310,7 +318,7 @@
     var $tempImgs = $(["[data-src]"]);
 
     $tempImgs.forEach(function($img) {
-      if (!$img.src || $img.src == "") {
+      if (!$img.src || $img.src === "") {
         if ($img.nodeName.toLowerCase() === "img") {
           $img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
         }
@@ -349,7 +357,7 @@
   }
 
   function applySrc($img, src) {
-    if (!$img.attr("data-src") || $img.attr("data-loading") == "true") {
+    if (!$img.attr("data-src") || $img.attr("data-loading") === "true") {
       return;
     }
 
