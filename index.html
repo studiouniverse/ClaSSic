@@ -234,7 +234,7 @@
       </div>
     </section>
 
-    <section class="bg-secondary">
+    <section class="bg-medium">
       <div class="editorial">
         <div class="editorial-article-bg"></div>
         <div class="editorial-aside-bg"></div>
@@ -278,13 +278,13 @@
       </div>
     </section>
 
-    <section class="bg-secondary">
+    <section class="bg-primary">
       <div class="layout carousel layout-widescreen">
         <div class="group">
           <div class="col-12 col-md-6 slides slides-left">
-            <div class="slide active" style="background-image:url(images/dog1.jpg)"><div class="absolute py-1 px-1 color-lightest"><h4 data-fade-in>Rey</h4></div></div>
-            <div class="slide" style="background-image:url(images/dog2.jpg)"><div class="absolute py-1 px-1 color-lightest"><h4 data-fade-in>Finn</h4></div></div>
-            <div class="slide" style="background-image:url(images/dog3.jpg)"><div class="absolute py-1 px-1 color-lightest"><h4 data-fade-in>Poe</h4></div></div>
+            <div class="slide shadow active" style="background-image:url(images/dog1.jpg)"><div class="absolute py-1 px-1 color-lightest"><h4 data-fade-in>Rey</h4></div></div>
+            <div class="slide shadow" style="background-image:url(images/dog2.jpg)"><div class="absolute py-1 px-1 color-lightest"><h4 data-fade-in>Finn</h4></div></div>
+            <div class="slide shadow" style="background-image:url(images/dog3.jpg)"><div class="absolute py-1 px-1 color-lightest"><h4 data-fade-in>Poe</h4></div></div>
             <div class="carousel-arrow-left color-lightest">
               <span><i class="fas fa-chevron-left"></i></span>
             </div>
@@ -293,9 +293,9 @@
             </div>
           </div>
           <div class="col-12 col-md-6 slides slides-right">
-            <div class="slide active bg-light"><div data-fade-in><h3>Dog one.</h3></div></div>
-            <div class="slide bg-light"><div data-fade-in><h3>Dog two.</h3></div></div>
-            <div class="slide bg-light"><div data-fade-in><h3>Dog three.</h3></div></div>
+            <div class="slide shadow active bg-light"><div data-fade-in><h3>Dog one.</h3></div></div>
+            <div class="slide shadow bg-light"><div data-fade-in><h3>Dog two.</h3></div></div>
+            <div class="slide shadow bg-light"><div data-fade-in><h3>Dog three.</h3></div></div>
             <div class="carousel-controls-dots color-medium"><ul>
               <li class="active"></li><li></li><li></li>
             </ul></div>
@@ -311,82 +311,50 @@
       </div>
     </section>
 
-    <section class="bg-light">
+    <section class="bg-alt">
       <div class="layout layout-content">
-        <div class="card bg-lightest">
-          <div class="px-2">
-            <div class="group group-center">
-              <div class="col-md-6 pb-md-down-0">
-                <h4>Cambridge, UK</h4>
-              </div>
-              <div class="col-md-6 text-md-right">
-                <h4><a href="tel:">+44 (0) 1223 123456</a></h4>
-              </div>
-            </div>
-            <div class="group group-center">
-              <div class="col-md-6 pb-md-down-0">
-                <h4>New York, USA</h4>
-              </div>
-              <div class="col-md-6 text-md-right">
-                <h4><a href="tel:">+1 (0) 1223 123456</a></h4>
-              </div>
-            </div>
-            <div class="group group-center">
-              <div class="col-md-6 pb-md-down-0">
-                <h4>Paris, France</h4>
-              </div>
-              <div class="col-md-6 text-md-right">
-                <h4><a href="tel:">+33 (0) 1223 123456</a></h4>
-              </div>
-            </div>
-          </div>
+        <div class="card px-2 py-2 bg-lightest">
+          <form>
+            <label>
+              <span class="label">
+                <span>Name</span>
+                <small>Required</small>
+              </span>
+              <input type="text" name="name" required="" autocomplete="name full-name">
+            </label>
+
+            <label>
+              <span class="label">
+                <span>Email</span>
+                <small>Required</small>
+              </span>
+              <input type="email" name="email" required="required" autocomplete="email email-address">
+            </label>
+
+            <label>
+              <span class="label">Subject</span>
+              <select name="subject">
+                <option value="Friendly Chat">I'm Happy!</option>
+                <option value="Angry Chat">I'm Angry!</option>
+                <option value="Other">I'm Stuck!</option>
+              </select>
+            </label>
+
+            <label>
+              <span class="label">
+                <span>Message</span>
+                <small>Required</small>
+              </span>
+              <textarea name="message" required=""></textarea>
+            </label>
+
+            <label>
+              <span>Sign up to our newsletter <input type="checkbox" name="newsletter" ></span>
+            </label>
+
+            <button type="submit" class="btn-primary">Send</button>
+          </form>
         </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="layout layout-content">
-        <h3>Send a Message</h3>
-        <form>
-          <label>
-            <span class="label">
-              <span>Name</span>
-              <small>Required</small>
-            </span>
-            <input type="text" name="name" required="" autocomplete="name full-name">
-          </label>
-
-          <label>
-            <span class="label">
-              <span>Email</span>
-              <small>Required</small>
-            </span>
-            <input type="email" name="email" required="required" autocomplete="email email-address">
-          </label>
-
-          <label>
-            <span class="label">Subject</span>
-            <select name="subject">
-              <option value="Friendly Chat">I'm Happy!</option>
-              <option value="Angry Chat">I'm Angry!</option>
-              <option value="Other">I'm Stuck!</option>
-            </select>
-          </label>
-
-          <label>
-            <span class="label">
-              <span>Message</span>
-              <small>Required</small>
-            </span>
-            <textarea name="message" required=""></textarea>
-          </label>
-
-          <label>
-            <span>Sign up to our newsletter <input type="checkbox" name="newsletter" ></span>
-          </label>
-
-          <button type="submit" class="btn-primary">Send</button>
-        </form>
       </div>
     </section>
   </main>
