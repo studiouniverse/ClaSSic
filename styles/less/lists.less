@@ -31,7 +31,7 @@ nav {
 
       a[href] {
         padding: 0;
-        display: block;
+        display: inline-block;
 
         &:hover,
         &:focus {
@@ -122,6 +122,12 @@ nav {
 
   &.nav-longer {
     .nav-longer();
+  }
+
+  &.nav-max-lg-longer {
+    @media @max-large-screen {
+      .nav-longer();
+    }
   }
 
   &.nav-max-md-longer {
